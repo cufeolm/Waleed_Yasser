@@ -6,8 +6,34 @@ package target_package;
     typedef enum logic [31:0] {
         LDW= 32'b11xxxxx000011xxxxx1xxxxxxxxxxxxx,
         A=32'b10xxxxx000000xxxxx000000000xxxxx,
+        Ai=32'b10xxxxx000000xxxxx1xxxxxxxxxxxxx,
+        UIM=32'b10xxxxx001010xxxxx000000000xxxxx,   // unsigned integer multiply
+        SIM=32'b10xxxxx001011xxxxx000000000xxxxx,   // signed integer multiply
+        Awc=32'b10xxxxx001000xxxxx000000000xxxxx,
+        Aami=32'b10xxxxx010000xxxxx000000000xxxxx,
+        UId=32'b10xxxxx001110xxxxx000000000xxxxx,
+        BwA=32'b10xxxxx000001xxxxx000000000xxxxx,
+        BAwc=32'b10xxxxx000101xxxxx000000000xxxxx,  // bitwise and with complement
+        BAI=32'b10xxxxx000001xxxxx1xxxxxxxxxxxxx,   // bitwise and immdeiate
+        BAIwc=32'b10xxxxx000101xxxxx1xxxxxxxxxxxxx,  // bit wise and immediate with complement
+        BX=32'b10xxxxx000011xxxxx000000000xxxxx,   //xor
+        BXI=32'b10xxxxx000011xxxxx1xxxxxxxxxxxxx,  // xor immediate
+        BXwc=32'b10xxxxx000111xxxxx000000000xxxxx, // xor complement
+        BXIwc=32'b10xxxxx000111xxxxx1xxxxxxxxxxxxx, // xor complement imm
+        BO=32'b10xxxxx000010xxxxx000000000xxxxx,
+        BOI=32'b10xxxxx000010xxxxx1xxxxxxxxxxxxx,   // or imm
+        BOwc=32'b10xxxxx000110xxxxx000000000xxxxx,  // or complement
+        BOIwc=32'b10xxxxx000110xxxxx1xxxxxxxxxxxxx, // or imm complement
         N=32'b00000001000000000000000000000000,
         S=32'b10xxxxx000100xxxxx000000000xxxxx,
+        Sim=32'b10xxxxx000100xxxxx1xxxxxxxxxxxxx, // sub imm
+        Sll=32'b10xxxxx100101xxxxx000000000xxxxx,   // shift logic left
+        Slli=32'b10xxxxx100101xxxxx100000000xxxxx,  // shift logic left imm
+        Srl=32'b10xxxxx100110xxxxx000000000xxxxx,   // shift logic right
+        Srli=32'b10xxxxx100110xxxxx100000000xxxxx,   // shift right logic imm
+        Sra=32'b10xxxxx100111xxxxx000000000xxxxx,  // shift right arithmetic
+        Srai=32'b10xxxxx100111xxxxx100000000xxxxx, // shift right arithmetic imm
+        Sh2b=32'b00xxxxx100xxxxxxxxxxxxxxxxxxxxxx, // set high-order 22 bit
         Store =32'b11xxxxx0001000000010000000000000,
         Load = 32'b11xxxxx0000000000010000000000000
     } opcode;
@@ -15,6 +41,11 @@ package target_package;
 
     opcode si_a [] ;    // opcodes array to store enums so we can randomize and use them
     integer supported_instructions ;    // number of instructions in the array
+    parameter ext_bits=19;
+    parameter last_imm=12;
+    parameter first_imm=0;
+    parameter to_ext=12;
+    parameter shamt_last=4;
     `include "leon_defines.sv"
 	`include"GUVM.sv"   // including GUVM classes 
 

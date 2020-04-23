@@ -1,10 +1,9 @@
 interface GUVM_interface;
    import uvm_pkg::*;
 `include "uvm_macros.svh"
-    import iface::*; // importing leon interface package: includes the records
-    import target_package::*; // importing leon core package
+    import iface::*;
+    import target_package::*;
 
-    // core interface ports: declaring records
     logic       clk;
     logic       rst;
     logic       pciclk;
@@ -18,78 +17,86 @@ interface GUVM_interface;
 
     dcache_out_type dcache_output; // to the core
     
-    dcache_in_type dcache_input ; // to the data cach
+    dcache_in_type dcache_input ;  // to the data cach
 
     icdiag_in_type dcache_output_diag; // inside dcache_out_type package // what is this ? 
 
-    // declaring the monitor
     GUVM_monitor monitor_h;
 
-    // initializing the clk signal
     initial begin
         clk = 0;
-	end	
-	
-    always @ (posedge clk)  force dut.iu0.de.cwp=7; // 
-	
-    // sending data to the core
+    end 
+    
+    always @ (posedge clk)  force dut.iu0.de.cwp=7;  ///////////////
+    
     function void send_data(logic [31:0] data);
         dcache_output.data = data ;
     endfunction
 
-    // sending instructions to the core
     function void send_inst(logic [31:0] inst);
         icache_output.data = inst ; 
     endfunction
-	
-    // sending the instruction to be verified
-	task verify_inst(logic [31:0] inst);
-        send_inst(inst) ; 
-		repeat(2*5)#10 clk=~clk;
-        repeat(2*5)#10 clk=~clk;
+    
+    task verify_inst(logic [31:0] inst);
+       send_inst(inst) ; 
+        repeat(2*5) begin//5
+        #10 clk=~clk;
+         end        
+        repeat(2*50)//5
+        begin
+        #10 clk=~clk;
+        end
+        
     endtask
-
-	// reveiving data from the DUT
+    
+    
     function logic [31:0] receive_data();
         $display("madd : %b",dcache_input.maddress);
         monitor_h.write_to_monitor(dcache_input.edata);
-		return dcache_input.edata;
+        return dcache_input.edata;
     endfunction 
-	
-	// dealing with the register file with the following load and store functions 
-    //function logic [31:0] store(logic [4:0] ra);
+    
+    
+    //function logic [31:0] store(logic [4:0] ra );
     task store(logic [31:0] inst );
-		send_inst(inst);
-		repeat(2*2)#10 clk=~clk;
-        bfm.nop();		
-		repeat(2*1)#10 clk=~clk;
-		$display("result = %0d",receive_data());
-		repeat(2*10)#10 clk=~clk;
-    endtask
-
-    //function void load(logic [4:0] ra , logic [31:0] rd);
-    task load(logic [31:0] inst, logic [31:0] rd );
+    //  bfm.nop();
+    //  bfm.nop();
         send_inst(inst);
-        send_data(rd);
-		repeat(2*1)#10 clk=~clk;
-		nop();
-		repeat(2*4)#10 clk=~clk;
+        repeat(2*2) begin #10 clk=~clk; end//2
+        bfm.nop();      
+        repeat(2*1) begin #10 clk=~clk; end //1
+        $display("result = %0d",receive_data());
+        repeat(2*10) begin #10 clk=~clk; end //10
+        //mon();
     endtask
 
-    // no operation
-    function void nop();
+    //function void load(logic [4:0] ra , logic [31:0] rd );
+    task load(logic [31:0] inst, logic [31:0] rd );
+       send_data(rd);
+       repeat(2*1)#10 clk=~clk;
+       send_inst(inst);
+    
+        repeat(2*1)#10 clk=~clk;
+        nop();
+        repeat(2*4)#10 clk=~clk;
+    endtask
+
+    function void nop ();
         icache_output.data = 32'h01000000;
     endfunction
-	
-    /*function void add(logic [4:0] r1,logic [4:0] r2,logic [4:0] rd);
+    
+    function void add(logic [4:0] r1,logic [4:0] r2,logic [4:0] rd);
+        //dcache_output.hold = 1'b0;
+        //icache_output.hold = 1'b0;
+        //dcache_output.mds = 1'b1;
         send_inst({2'b10,rd,6'b0,r1,1'b0,8'b0,r2});
-    endfunction*/
+    endfunction
 
-    // initializing the core
     task set_Up();
+                ////////////// da mkan elsetup function //////////////////
         send_data(32'h100);
         send_inst(32'h01000000);
-		pciclk = 1'b0;
+        pciclk = 1'b0;
         pcirst = 1'b0;
 
         // iui
@@ -98,17 +105,17 @@ interface GUVM_interface;
         // ico
         // icache_output.data = 32'h8E00C002;
         icache_output.exception = 1'b0;
-        icache_output.hold = 1'b1;
+        icache_output.hold = 1'b1;//1
         icache_output.flush = 1'b0; 
         icache_output.diagrdy = 1'b0;
         icache_output.diagdata = 32'h00000000; 
-        icache_output.mds = 1'b0;
+        icache_output.mds = 1'b0;//0
 
         // dco
         //dcache_output.data = 32'h13; // Data bus address
         dcache_output.mexc = 1'b0; // memory exception
         dcache_output.hold = 1'b1;
-        dcache_output.mds = 1'b1;
+        dcache_output.mds = 1'b1; //1
         dcache_output.werr = 1'b0; // memory write error
 
         dcache_output_diag.addr = 15 ;
@@ -119,14 +126,14 @@ interface GUVM_interface;
         dcache_output_diag.flush = 1'b0;
 
         dcache_output.icdiag=dcache_output_diag;
-		repeat (2*10)#10 clk=~clk;
+        repeat (2*10)#10 clk=~clk;
     endtask
 
     task reset_dut();
         rst = 1'b0;
-		repeat (2*10)#10 clk=~clk;  
-		rst = 1'b1;
-		repeat (2*1)#10 clk=~clk;
+        repeat (2*10)#10 clk=~clk;  
+        rst = 1'b1;
+        repeat (2*1)#10 clk=~clk;
     endtask : reset_dut
 
 endinterface: GUVM_interface

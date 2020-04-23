@@ -15,7 +15,7 @@ class GUVM_sequence extends uvm_sequence #(GUVM_sequence_item);
             command = target_seq_item::type_id::create("command");
             store = target_seq_item::type_id::create("store");
             
-            command.ran_constrained(Slli);
+            command.ran_constrained(A);
             
             //command.ran();
 

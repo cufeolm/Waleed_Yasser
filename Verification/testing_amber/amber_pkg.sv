@@ -6,7 +6,21 @@ package target_package;
     typedef enum logic[31:0] { 
         LW = 32'b111101101001xxxxxxxxxxxxxxxxxxxx,
         SW = 32'b111001011000xxxxxxxxxxxxxxxxxxxx,
-        A  = 32'b1110000010000xxx0xxx000000000xxx,
+        A  = 32'b111000010000xxx0xxx000000000xxx,
+        S = 32'b1110000001000xxx0xxx000000000xxx,
+        Rs= 32'b1110000001100xxx0xxx000000000xxx,
+        Swc=32'b1110000011000xxx0xxx000000000xxx, // sub with carry
+        C=32'b1110000101010xxx0xxx000000000xxx,
+       // M=32'b1110000000000xxx00000xxx10010xxx,
+        M=32'b1110000000000xxx0xxx0xxx10010xxx,
+        MA=32'b1110000000100xxx0xxx0xxx10010xxx, // multiply accumlate
+        Awc=32'b1110000010100xxx0xxx000000000xxx,   // add with carry
+        BwA= 32'b1110000000000xxx0xxx000000000xxx,
+        BAwc=32'b1110000111000xxx0xxx000000000xxx,  // bitwise and with complement
+        BX=  32'b1110000000100xxx0xxx000000000xxx,   // xor
+        BO= 32'b1110000110000xxx0xxx000000000xxx,
+        Mov=32'b1110000110100xxx0xxx000000000xxx,
+        Mn= 32'b1110000111100xxx0xxx000000000xxx,
         Store = 32'b11100101100000000xxx000000000000,
         Load =  32'b1111011010010xxx0xxx000000000xxx 
     } opcode; 
@@ -17,7 +31,11 @@ package target_package;
     `include "amber_defines.sv"
     `include "GUVM.sv"   // including GUVM classes 
     
-
+    parameter ext_bits=20;  // all are dummy variables
+    parameter last_imm=31;
+    parameter first_imm=19;
+    parameter to_ext=19;
+    parameter shamt_last=31;
     // fill supported instruction array
     function void fill_si_array();
     // this does NOT affect generalism
