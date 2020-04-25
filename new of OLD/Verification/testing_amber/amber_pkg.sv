@@ -4,38 +4,39 @@ package target_package;
 
     // instructions opcodes verified in this core 
     typedef enum logic[31:0] { 
-        LW = 32'b111101101001xxxxxxxxxxxxxxxxxxxx,
-        SW = 32'b111001011000xxxxxxxxxxxxxxxxxxxx,
-        A  = 32'b111000010000xxx0xxx000000000xxx,
-        S = 32'b1110000001000xxx0xxx000000000xxx,
-        Rs= 32'b1110000001100xxx0xxx000000000xxx,
+        LW=32'b111101101001xxxxxxxxxxxxxxxxxxxx,
+        SW=32'b111001011000xxxxxxxxxxxxxxxxxxxx,
+        A=32'b111000010000xxx0xxx000000000xxx,
+        S=32'b1110000001000xxx0xxx000000000xxx,
+        Rs=32'b1110000001100xxx0xxx000000000xxx,
         Swc=32'b1110000011000xxx0xxx000000000xxx, // sub with carry
         C=32'b1110000101010xxx0xxx000000000xxx,
-       // M=32'b1110000000000xxx00000xxx10010xxx,
+        // M=32'b1110000000000xxx00000xxx10010xxx,
         M=32'b1110000000000xxx0xxx0xxx10010xxx,
         MA=32'b1110000000100xxx0xxx0xxx10010xxx, // multiply accumlate
-        Awc=32'b1110000010100xxx0xxx000000000xxx,   // add with carry
-        BwA= 32'b1110000000000xxx0xxx000000000xxx,
-        BAwc=32'b1110000111000xxx0xxx000000000xxx,  // bitwise and with complement
-        BX=  32'b1110000000100xxx0xxx000000000xxx,   // xor
-        BO= 32'b1110000110000xxx0xxx000000000xxx,
+        Awc=32'b1110000010100xxx0xxx000000000xxx, // add with carry
+        BwA=32'b1110000000000xxx0xxx000000000xxx, // bitwise and
+        BAwc=32'b1110000111000xxx0xxx000000000xxx, // bitwise and with complement
+        BX=32'b1110000000100xxx0xxx000000000xxx, // xor
+        BO=32'b1110000110000xxx0xxx000000000xxx,
         Mov=32'b1110000110100xxx0xxx000000000xxx,
-        Mn= 32'b1110000111100xxx0xxx000000000xxx,
-        Store = 32'b11100101100000000xxx000000000000,
-        Load =  32'b1111011010010xxx0xxx000000000xxx 
+        Mn=32'b1110000111100xxx0xxx000000000xxx,
+        Store=32'b11100101100000000xxx000000000000,
+        Load=32'b1111011010010xxx0xxx000000000xxx 
     } opcode; 
     // mutual instructions between cores have the same name so we can verify all cores using one scoreboard
     
-    opcode si_a[];  // opcodes array to store enums so we can randomize and use them
+    opcode si_a[]; // opcodes array to store enums so we can randomize and use them
     integer supported_instructions; // number of instructions in the array
+    parameter ext_bits=0;
+    parameter last_imm=0;
+    parameter first_imm=0;
+    parameter to_ext=0;
+    parameter shamt_last=0;
     `include "amber_defines.sv"
-    `include "GUVM.sv"   // including GUVM classes 
+    `include "GUVM.sv" // including GUVM classes 
     
-    parameter ext_bits=20;  // all are dummy variables
-    parameter last_imm=31;
-    parameter first_imm=19;
-    parameter to_ext=19;
-    parameter shamt_last=31;
+
     // fill supported instruction array
     function void fill_si_array();
     // this does NOT affect generalism
@@ -53,7 +54,6 @@ package target_package;
                 end
         `endif
     endfunction
-
 
     // function to determine format of verfied instruction and fill its operands
     function GUVM_sequence_item get_format (logic [31:0] inst); 
@@ -86,7 +86,7 @@ package target_package;
                                 end
                         end
                     else if(inst[7] == 1'b0)
-                        begin //register shift
+                        begin // register shift
                             ay.rs1 = inst[19:16];
                             ay.rd = inst[15:12];
                             ay.rs2 = inst[3:0];
@@ -111,8 +111,8 @@ package target_package;
                             ay.b = inst[22];
                         end
                 end
-		REGOP:	//Data Processing (REGOP)
-			begin //32-bit immediate
+		REGOP: // Data Processing (REGOP)
+			begin // 32-bit immediate
 				ay.rs1 = inst[19:16];
 				ay.rd = inst[15:12];
 				ay.s = inst[20];
@@ -143,7 +143,7 @@ package target_package;
 				ay.shift = inst[6:5];
 				ay.shift_imm = inst[11:7];
 			end
-		MTRANS: //Block Data Transfer (MTRANS)
+		MTRANS: // Block Data Transfer (MTRANS)
 			begin
 				ay.rs1 = inst[19:16];
 				ay.register_list = inst[15:0];

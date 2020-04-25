@@ -18,7 +18,7 @@ class GUVM_sequence extends uvm_sequence #(GUVM_sequence_item);
             store = target_seq_item::type_id::create("store");//store the result from reg z to memory location (dont care)
             //opcode x=A ;
            // $display("hello , this is the sequence,%d",command.upper_bit);
-            command.ran_constrained(A); // first randomize the instruction as an add (A is the enum code for add)
+            command.ran_constrained(Sra); // first randomize the instruction as an add (A is the enum code for add)
 
             command.setup();//set up the instruction format fields 
             load1.load(command.rs1);//specify regx address

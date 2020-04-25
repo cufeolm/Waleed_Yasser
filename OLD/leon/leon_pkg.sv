@@ -2,7 +2,7 @@ package target_package;
     import uvm_pkg::*;
     `include "uvm_macros.svh"
     typedef enum logic [31:0] {
-        LDW= 32'b11xxxxx000011xxxxx1xxxxxxxxxxxxx,
+        LDW=32'b11xxxxx000011xxxxx1xxxxxxxxxxxxx,
         A=32'b10xxxxx000000xxxxx000000000xxxxx,
         Ai=32'b10xxxxx000000xxxxx1xxxxxxxxxxxxx,
         UIM=32'b10xxxxx001010xxxxx000000000xxxxx,   // unsigned integer multiply
@@ -32,7 +32,7 @@ package target_package;
         Sra=32'b10xxxxx100111xxxxx000000000xxxxx,  // shift right arithmetic
         Srai=32'b10xxxxx100111xxxxx100000000xxxxx, // shift right arithmetic imm
         Sh2b=32'b00xxxxx100xxxxxxxxxxxxxxxxxxxxxx, // set high-order 22 bit
-        Store =32'b11xxxxx0001000000010000000000000,
+        Store=32'b11xxxxx0001000000010000000000000,
         Load = 32'b11xxxxx0000000000010000000000000
     } opcode;
 

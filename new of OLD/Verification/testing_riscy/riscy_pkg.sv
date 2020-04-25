@@ -5,11 +5,11 @@ package target_package;
     // instructions opcodes verified in this core 
 	typedef enum logic[31:0] {
 		LW = 32'bxxxxxxxxxxxxxxxxx010xxxxx0000011,
+		SW = 32'bxxxxxxxxxxxxxxxxx010xxxxx0100011,
 		A = 32'b0000000xxxxxxxxxx000xxxxx0110011,
-		Ai=32'bxxxxxxxxxxxxxxxxx000xxxxx0010011,
+		Ai = 32'bxxxxxxxxxxxxxxxxx000xxxxx0010011,
 		M=32'b0000001xxxxxxxxxx000xxxxx0110011,
 		Mh=32'b0000001xxxxxxxxxx001xxxxx0110011,
-
 		Mhu=32'b0000001xxxxxxxxxx011xxxxx0110011,
 		Mhs=32'b0000001xxxxxxxxxx010xxxxx0110011,  // mult high signed-unsigned in riscy
 		UId=32'b0000001xxxxxxxxxx101xxxxx0110011,
@@ -23,25 +23,24 @@ package target_package;
 		BO=32'b0000000xxxxxxxxxx110xxxxx0110011,
 		BOI=32'bxxxxxxxxxxxxxxxxx110xxxxx0010011,
 		S=32'b0100000xxxxxxxxxx000xxxxx0110011,
-		SW = 32'bxxxxxxxxxxxxxxxxx010xxxxx0100011,
 		Sll=32'b0000000xxxxxxxxxx001xxxxx0110011, // shift left logic
 		Slli=32'b000000xxxxxxxxxxx001xxxxx0010011, // shift logic left imm
 		Srl=32'b0000000xxxxxxxxxx101xxxxx0110011,  // sift right logic
 		Srli=32'b000000xxxxxxxxxxx101xxxxx0010011, // shift right logic imm
 		Sra=32'b0100000xxxxxxxxxx101xxxxx0110011,  // shift right arithmetic
-		Srai=32'b010000xxxxxxxxxxx101xxxxx0010011, // shift arithmetic right imm 
-		Store =32'b0000000xxxxx00000010000000100011,
+		Srai=32'b010000xxxxxxxxxxx101xxxxx0010011, // shift arithmetic right imm
+		Store = 32'b0000000xxxxx00000010000000100011,
         Load = 32'b00000000000000000010xxxxx0000011
 	} opcode;
     // mutual instructions between cores have the same name so we can verify all cores using one scoreboard
 
-	opcode si_a [];	// opcodes array to store enums so we can randomize and use them
+	opcode si_a[];	// opcodes array to store enums so we can randomize and use them
     integer supported_instructions;	 // number of instructions in the array
 	parameter ext_bits=20;
     parameter last_imm=31;
     parameter first_imm=20;
     parameter to_ext=20;
-    parameter shamt_last =25;
+    parameter shamt_last=25;
 	`include "riscy_defines.sv"
 	`include "GUVM.sv"	// including GUVM classes 
    
@@ -179,6 +178,6 @@ package target_package;
 			begin
 				return 1'b0;
 			end
-	   endfunction : xis1
+	endfunction : xis1
 
 endpackage

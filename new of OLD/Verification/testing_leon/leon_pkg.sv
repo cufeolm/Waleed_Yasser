@@ -4,7 +4,7 @@ package target_package;
     
     // instructions opcodes verified in this core 
     typedef enum logic [31:0] {
-        LDW= 32'b11xxxxx000011xxxxx1xxxxxxxxxxxxx,
+        LDW=32'b11xxxxx000011xxxxx1xxxxxxxxxxxxx,
         A=32'b10xxxxx000000xxxxx000000000xxxxx,
         Ai=32'b10xxxxx000000xxxxx1xxxxxxxxxxxxx,
         UIM=32'b10xxxxx001010xxxxx000000000xxxxx,   // unsigned integer multiply
@@ -34,12 +34,12 @@ package target_package;
         Sra=32'b10xxxxx100111xxxxx000000000xxxxx,  // shift right arithmetic
         Srai=32'b10xxxxx100111xxxxx100000000xxxxx, // shift right arithmetic imm
         Sh2b=32'b00xxxxx100xxxxxxxxxxxxxxxxxxxxxx, // set high-order 22 bit
-        Store =32'b11xxxxx0001000000010000000000000,
+        Store = 32'b11xxxxx0001000000010000000000000,
         Load = 32'b11xxxxx0000000000010000000000000
     } opcode;
     // mutual instructions between cores have the same name so we can verify all cores using one scoreboard
 
-    opcode si_a [] ;    // opcodes array to store enums so we can randomize and use them
+    opcode si_a[] ;    // opcodes array to store enums so we can randomize and use them
     integer supported_instructions ;    // number of instructions in the array
     parameter ext_bits=19;
     parameter last_imm=12;
