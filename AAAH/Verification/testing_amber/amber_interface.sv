@@ -149,6 +149,7 @@ interface GUVM_interface(input clk);
     logic o_wb_we;
     logic [127:0] i_wb_dat;
     logic [127:0] o_wb_dat;
+    logic [127:0] out;
 
 
     logic o_wb_cyc;
@@ -186,7 +187,7 @@ interface GUVM_interface(input clk);
 
     task toggle_clk(integer i);
         allow_pseudo_clk=1;
-        repeat(i) @(posedge clk_pseudo);
+        repeat(i*2) @(posedge clk_pseudo);
         allow_pseudo_clk=0;
     endtask
 
@@ -244,7 +245,13 @@ interface GUVM_interface(input clk);
         end else begin
             result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
         end*/
-        result_monitor_h.write_to_monitor(dut.u_mem.i_write_data,next_pc);
+        if(same_inst == {{16'haaaa}, {Rd}, {12'haaa}}) begin
+            out=0;
+            result_monitor_h.write_to_monitor(out[31:0], next_pc);
+        end else begin
+            result_monitor_h.write_to_monitor(out[31:0], next_pc);
+        end
+         // result_monitor_h.write_to_monitor(o_wb_data[31:0], next_pc);
     endtask
 
     function logic[31:0] get_cpc();
