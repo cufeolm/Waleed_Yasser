@@ -56,7 +56,10 @@ output      [15:0]          o_wb_sel,
 output                      o_wb_we,
 input       [127:0]         i_wb_dat,
 output      [127:0]         o_wb_dat,
+
 output      [127:0]         out,
+input       [127:0]         in,
+
 output                      o_wb_cyc,
 output                      o_wb_stb,
 input                       i_wb_ack,
@@ -210,8 +213,8 @@ a25_fetch u_fetch (
 
     .o_wb_req                           ( icache_wb_req                     ),
     .o_wb_address                       ( icache_wb_address                 ),
-    // .i_wb_read_data                     ( icache_wb_read_data               ),
-    .i_wb_read_data                     ( i_wb_dat                          ), // edited by Waleed Taie
+    // .i_wb_read_data                     ( icache_wb_read_data               ), // commented by Waleed Taie
+    .i_wb_read_data                     ( in                          ), // added by Waleed Taie
     .i_wb_ready                         ( icache_wb_ready                   )
 );
 
@@ -404,8 +407,8 @@ a25_mem u_mem (
     .o_wb_cached_req                    ( dcache_wb_cached_req              ),
     .o_wb_uncached_req                  ( dcache_wb_uncached_req            ),
     .o_wb_write                         ( dcache_wb_write                   ),
-    //.o_wb_write_data                    ( dcache_wb_write_data              ),
-    .o_wb_write_data                    ( out                               ),
+    //.o_wb_write_data                    ( dcache_wb_write_data              ), // commented by Waleed Taie
+    .o_wb_write_data                    ( out                               ), // added by Waleed Taie
     .o_wb_byte_enable                   ( dcache_wb_byte_enable             ),
     .o_wb_address                       ( dcache_wb_address                 ),      
     .i_wb_cached_ready                  ( dcache_wb_cached_ready            ),
@@ -440,7 +443,7 @@ a25_write_back u_write_back (
 // ======================================
 //  Wishbone Master I/F
 // ======================================
-a25_wishbone u_wishbone (
+/*a25_wishbone u_wishbone (
     // CPU Side
     .i_clk                              ( i_clk                             ),
     
@@ -482,7 +485,7 @@ a25_wishbone u_wishbone (
     .i_wb_ack                           ( i_wb_ack                          ),
     .i_wb_err                           ( i_wb_err                          )
 );
-
+*/
 
 // ======================================
 //  Co-Processor #15
