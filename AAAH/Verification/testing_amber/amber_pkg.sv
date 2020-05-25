@@ -7,7 +7,6 @@ package target_package;
         //LW = 32'b111101101001xxxxxxxxxxxxxxxxxxxx,
         //NOP = 32'b111101101000xxxxxxxxxxxxxxxxxxxx,
         NOP = 32'b11111111111111111111111111111111,
-        // NOP = 32'b00000000000000000000000000000000,
         //SW = 32'b111001011000xxxxxxxxxxxxxxxxxxxx,
         A  = 32'b1110000010000xxx0xxx000000000xxx,
         M=32'b1110000000000xxx00000xxx10010xxx,

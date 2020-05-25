@@ -41,7 +41,7 @@ class GUVM_driver extends uvm_driver #(target_seq_item);
                 bfm.update_command_monitor(cmd);
                 bfm.update_result_monitor();
                 // bfm.update_result_monitor();
-                bfm.toggle_clk(1);
+                bfm.toggle_clk(20);
             end
             
             seq_item_port.item_done();

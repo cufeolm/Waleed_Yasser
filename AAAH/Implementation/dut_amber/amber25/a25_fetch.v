@@ -41,6 +41,7 @@
 //                                                              //
 //////////////////////////////////////////////////////////////////
 
+
 module a25_fetch
 (
 input                       i_clk,
@@ -99,14 +100,14 @@ assign cache_read_data     = i_iaddress[3:2] == 2'd0    ? cache_read_data128[ 31
                              i_iaddress[3:2] == 2'd2    ? cache_read_data128[ 95:64] :
                                                           cache_read_data128[127:96] ;
 
-/*assign wb_rdata32 = i_iaddress[3:2] == 2'd0 ? i_wb_read_data[ 31: 0] : // commented by Waleed Taie
+/*assign wb_rdata32 = i_iaddress[3:2] == 2'd0 ? i_wb_read_data[ 31: 0] :
                     i_iaddress[3:2] == 2'd1 ? i_wb_read_data[ 63:32] :
                     i_iaddress[3:2] == 2'd2 ? i_wb_read_data[ 95:64] :
                                               i_wb_read_data[127:96] ;*/
 
 assign wb_rdata32 = i_wb_read_data[ 31: 0]; // by Waleed Taie
 
-/*assign o_fetch_instruction = sel_cache                  ? cache_read_data : // commented by Waleed Taie
+/*assign o_fetch_instruction = sel_cache                  ? cache_read_data : 
                                uncached_instruction_read  ? wb_rdata32      :
                                                             32'hffeeddcc    ;*/
 assign o_fetch_instruction = wb_rdata32; // by Waleed Taie
@@ -114,8 +115,7 @@ assign o_fetch_instruction = wb_rdata32; // by Waleed Taie
 // Stall the instruction decode and execute stages of the core
 // when the fetch stage needs more than 1 cycle to return the requested
 // read data
-// assign o_fetch_stall    = !i_system_rdy || wait_wb || cache_stall; // commented by Waleed Taie 
-assign o_fetch_stall    = !i_system_rdy; // added by Waleed Taie
+assign o_fetch_stall    = !i_system_rdy || wait_wb || cache_stall;
 
 assign o_wb_address     = i_iaddress;
 assign o_wb_req         = icache_wb_req || uncached_instruction_read;
@@ -130,7 +130,7 @@ assign core_stall = o_fetch_stall || i_mem_stall || i_exec_stall || i_conflict;
 // ======================================
 // L1 Instruction Cache
 // ======================================
-/*a25_icache u_cache (
+a25_icache u_cache (
     .i_clk                      ( i_clk                 ),
     .i_core_stall               ( core_stall            ),
     .o_stall                    ( cache_stall           ),
@@ -145,7 +145,7 @@ assign core_stall = o_fetch_stall || i_mem_stall || i_exec_stall || i_conflict;
     .o_wb_req                   ( icache_wb_req         ),
     .i_wb_read_data             ( i_wb_read_data        ),
     .i_wb_ready                 ( i_wb_ready            )
-);*/
+);
 
 
 endmodule

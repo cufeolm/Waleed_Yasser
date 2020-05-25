@@ -20,8 +20,7 @@ module top;
         .o_wb_stb(bfm.o_wb_stb),
         .i_wb_ack(bfm.i_wb_ack),
         .i_wb_err(bfm.i_wb_err),
-        .out(bfm.out),
-        .in(bfm.in)
+        .out(bfm.out)
 
     );
 

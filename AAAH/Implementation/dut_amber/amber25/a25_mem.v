@@ -136,8 +136,7 @@ assign mem_read_data_c          = sel_cache             ? cache_read_data :
 assign mem_load_rd_c            = {i_daddress[1:0], i_exec_load_rd};
 assign mem_read_data_valid_c    = i_daddress_valid && !i_write_enable && !o_mem_stall;
 
-// assign o_mem_stall              = uncached_wb_wait || cache_stall; commented by Waleed Taie
-assign o_mem_stall              = i_fetch_stall; // Added by Waleed Taie
+assign o_mem_stall              = uncached_wb_wait || cache_stall;
 
 // Request wishbone access
 assign o_wb_byte_enable         = i_daddress[3:2] == 2'd0 ? {12'd0, i_byte_enable       } :
@@ -193,7 +192,7 @@ always @( posedge i_clk )
 // ======================================
 // L1 Data Cache
 // ======================================
-/*a25_dcache u_dcache (
+a25_dcache u_dcache (
     .i_clk                      ( i_clk                 ),
     .i_fetch_stall              ( i_fetch_stall         ),
     .i_exec_stall               ( i_exec_stall          ),
@@ -214,7 +213,7 @@ always @( posedge i_clk )
     .o_wb_cached_req            ( cached_wb_req         ),
     .i_wb_cached_rdata          ( i_wb_cached_rdata     ),
     .i_wb_cached_ready          ( i_wb_cached_ready     )
-);*/
+);
 
 
 
