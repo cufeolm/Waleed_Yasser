@@ -8,7 +8,7 @@ vlog +incdir+../testing_amber+../common+../common/inst_h+../common/Tests+../comm
 vlog ../testing_amber/amber_interface.sv
 vlog ../testing_amber/top.sv
 
-vsim top +UVM_TESTNAME=add_test +ARG_INST=M
+vsim top +UVM_TESTNAME=add_test +ARG_INST=A
 
 add wave -position insertpoint sim:/top/bfm/*
 add wave -position insertpoint sim:/top/bfm/send_data/*

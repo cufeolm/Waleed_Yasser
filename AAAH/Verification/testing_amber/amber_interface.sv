@@ -13,9 +13,7 @@
 //     logic [127:0] i_wb_dat;
 //     logic [127:0] o_wb_dat;
 
-// /*    logic [127:0] output_data; // to solve o_wb_data toggling problem + the always block below
-//     logic [127:0] x=0;
-//     logic [127:0] y;*/
+//     logic [127:0] out;
 
 //     logic o_wb_cyc;
 //     logic o_wb_stb;
@@ -51,7 +49,7 @@
 //     task toggle_clk(integer i);
 //         if(same_inst!=32'b11111111111111111111111111111111) begin
 //             allow_pseudo_clk=1;
-//             repeat(i*5) @(posedge clk_pseudo);
+//             repeat(i) @(posedge clk_pseudo);
 //             allow_pseudo_clk=0;
 //         end
 //     endtask
@@ -93,8 +91,8 @@
 //     endfunction
 
 //     task update_result_monitor();
-// /*        if(same_inst!=32'b11111111111111111111111111111111) begin
-//             if(same_inst[11:0]==12'b000000000000 && same_inst[31:20]==17'b1110010110000) begin
+//         if(same_inst!=32'b11111111111111111111111111111111) begin
+//             /*if(same_inst[11:0]==12'b000000000000 && same_inst[31:20]==17'b1110010110000) begin
 //                 forever begin
 //                     if(o_wb_we == 1) begin
 //                         result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
@@ -107,9 +105,15 @@
 //                 end
 //             end else begin
 //                 result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
+//             end*/
+//             if(same_inst == {{16'haaaa}, {Rd}, {12'haaa}}) begin
+//                 out=0;
+//                 result_monitor_h.write_to_monitor(out[31:0], next_pc);
+//             end else begin
+//                 result_monitor_h.write_to_monitor(out[31:0], next_pc);
 //             end
-//         end*/
-//         result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
+//         end
+//         // result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
 //     endtask
 
 //     function logic[31:0] get_cpc();
@@ -150,6 +154,7 @@ interface GUVM_interface(input clk);
     logic [127:0] i_wb_dat;
     logic [127:0] o_wb_dat;
     logic [127:0] out;
+    logic [127:0] in;
 
 
     logic o_wb_cyc;
@@ -187,19 +192,13 @@ interface GUVM_interface(input clk);
 
     task toggle_clk(integer i);
         allow_pseudo_clk=1;
-        repeat(i*2) @(posedge clk_pseudo);
+        repeat(i) @(posedge clk_pseudo);
         allow_pseudo_clk=0;
     endtask
 
     // sending data to the core
     task send_data(logic [31:0] data);
-        /*if(u==0) begin
-            repeat(5) begin
-                #10 clk_pseudo = ~clk_pseudo;
-            end
-        end*/
         data_in = data;
-        //u++;
     endtask
 
     // sending instructions to the core
@@ -207,8 +206,8 @@ interface GUVM_interface(input clk);
         same_inst = inst;
         Rd = inst[15:12]; // destination register address bits: 4 bits
         $display("inst = %h", inst);
-        if(inst == {{16'haaaa}, {Rd}, {12'haaa}}) begin // accessing the register file by forcing
-            i_wb_dat = {{16'haaaa}, {Rd}, {12'haaa}};
+        if(inst == {16'haaaa, Rd, 12'haaa}) begin // accessing the register file by forcing
+            in = {16'hF080, Rd, 12'h003};
             case(Rd)
                 4'b0000: dut.u_execute.u_register_bank.r0 = data_in;
                 4'b0001: dut.u_execute.u_register_bank.r1 = data_in;
@@ -221,7 +220,7 @@ interface GUVM_interface(input clk);
                 default: $display("Error in SEL");
             endcase
         end else begin
-            i_wb_dat = inst;
+            in = inst;
         end
         // current_pc = current_pc+4;
     endtask
@@ -231,34 +230,19 @@ interface GUVM_interface(input clk);
     endfunction
 
     task update_result_monitor();
-        /*if(same_inst[11:0]==12'b000000000000 && same_inst[31:20]==17'b111001011000) begin
-            forever begin
-                if(o_wb_we == 1) begin
-                    result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
-                    break;
-                end else begin
-                    repeat(1) begin
-                        #10 clk_pseudo = ~clk_pseudo;
-                    end
-                end
-            end
-        end else begin
-            result_monitor_h.write_to_monitor(o_wb_dat,next_pc);
-        end*/
         if(same_inst == {{16'haaaa}, {Rd}, {12'haaa}}) begin
             out=0;
             result_monitor_h.write_to_monitor(out[31:0], next_pc);
         end else begin
             result_monitor_h.write_to_monitor(out[31:0], next_pc);
         end
-         // result_monitor_h.write_to_monitor(o_wb_data[31:0], next_pc);
     endtask
 
     function logic[31:0] get_cpc();
         /*$display("current_pc = %h       %t", current_pc, $time);
         return current_pc;*/
-        $display("current_pc = %h       %t", dut.u_execute.u_register_bank.o_pc, $time);
-        return dut.u_execute.u_register_bank.o_pc;
+        $display("current_pc = %h       %t", dut.u_execute.u_register_bank.r15, $time);
+        return dut.u_execute.u_register_bank.r15;
     endfunction
 
     // initializing the core
@@ -268,7 +252,7 @@ interface GUVM_interface(input clk);
         i_system_rdy = 1'b1;
         i_wb_ack = 1'b1;
         i_wb_err = 1'b0;
-        //toggle_clk(1);
+        toggle_clk(1);
     endtask: set_Up
 
     task reset_dut();
