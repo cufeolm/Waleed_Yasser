@@ -1,0 +1,259 @@
+# //  Questa Sim-64
+# //  Version 10.6c win64 Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do tb.do
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:34 on May 27,2020
+# vlog -reportprogress 300 a25_alu.v 
+# -- Compiling module a25_alu
+# 
+# Top level modules:
+# 	a25_alu
+# End time: 09:28:34 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:34 on May 27,2020
+# vlog -reportprogress 300 a25_barrel_shift.v 
+# -- Compiling module a25_barrel_shift
+# 
+# Top level modules:
+# 	a25_barrel_shift
+# End time: 09:28:34 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:34 on May 27,2020
+# vlog -reportprogress 300 a25_config_defines.v 
+# End time: 09:28:34 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:34 on May 27,2020
+# vlog -reportprogress 300 a25_coprocessor.v 
+# -- Compiling module a25_coprocessor
+# 
+# Top level modules:
+# 	a25_coprocessor
+# End time: 09:28:34 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:35 on May 27,2020
+# vlog -reportprogress 300 a25_core.v 
+# -- Compiling module a25_core
+# 
+# Top level modules:
+# 	a25_core
+# End time: 09:28:35 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:35 on May 27,2020
+# vlog -reportprogress 300 a25_dcache.v 
+# -- Compiling module a25_dcache
+# 
+# Top level modules:
+# 	a25_dcache
+# End time: 09:28:35 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:35 on May 27,2020
+# vlog -reportprogress 300 a25_decode.v 
+# -- Compiling module a25_decode
+# 
+# Top level modules:
+# 	a25_decode
+# End time: 09:28:36 on May 27,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:36 on May 27,2020
+# vlog -reportprogress 300 a25_execute.v 
+# -- Compiling module a25_execute
+# 
+# Top level modules:
+# 	a25_execute
+# End time: 09:28:36 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:36 on May 27,2020
+# vlog -reportprogress 300 a25_fetch.v 
+# -- Compiling module a25_fetch
+# 
+# Top level modules:
+# 	a25_fetch
+# End time: 09:28:36 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:36 on May 27,2020
+# vlog -reportprogress 300 a25_icache.v 
+# -- Compiling module a25_icache
+# 
+# Top level modules:
+# 	a25_icache
+# End time: 09:28:36 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:36 on May 27,2020
+# vlog -reportprogress 300 a25_mem.v 
+# -- Compiling module a25_mem
+# 
+# Top level modules:
+# 	a25_mem
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 a25_multiply.v 
+# -- Compiling module a25_multiply
+# 
+# Top level modules:
+# 	a25_multiply
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 a25_register_bank.v 
+# -- Compiling module a25_register_bank
+# 
+# Top level modules:
+# 	a25_register_bank
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 a25_shifter.v 
+# -- Compiling module a25_shifter
+# 
+# Top level modules:
+# 	a25_shifter
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 a25_wishbone.v 
+# -- Compiling module a25_wishbone
+# 
+# Top level modules:
+# 	a25_wishbone
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 a25_wishbone_buf.v 
+# -- Compiling module a25_wishbone_buf
+# 
+# Top level modules:
+# 	a25_wishbone_buf
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 a25_write_back.v 
+# -- Compiling module a25_write_back
+# 
+# Top level modules:
+# 	a25_write_back
+# End time: 09:28:37 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:37 on May 27,2020
+# vlog -reportprogress 300 boot_mem32.v 
+# -- Compiling module boot_mem32
+# 
+# Top level modules:
+# 	boot_mem32
+# End time: 09:28:38 on May 27,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:38 on May 27,2020
+# vlog -reportprogress 300 boot_mem128.v 
+# -- Compiling module boot_mem128
+# 
+# Top level modules:
+# 	boot_mem128
+# End time: 09:28:38 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:38 on May 27,2020
+# vlog -reportprogress 300 generic_sram_byte_en.v 
+# -- Compiling module generic_sram_byte_en
+# 
+# Top level modules:
+# 	generic_sram_byte_en
+# End time: 09:28:38 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:38 on May 27,2020
+# vlog -reportprogress 300 generic_sram_line_en.v 
+# -- Compiling module generic_sram_line_en
+# 
+# Top level modules:
+# 	generic_sram_line_en
+# End time: 09:28:39 on May 27,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:39 on May 27,2020
+# vlog -reportprogress 300 GUVM_bfm_amber.sv 
+# -- Compiling interface GUVM_interface
+# 
+# Top level modules:
+# 	--none--
+# End time: 09:28:39 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 09:28:39 on May 27,2020
+# vlog -reportprogress 300 top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 09:28:39 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt top 
+# Start time: 09:28:39 on May 27,2020
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.top
+# Loading sv_std.std
+# Loading work.top
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.GUVM_interface
+# Loading work.GUVM_interface
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_core
+# Loading work.a25_core
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_fetch
+# Loading work.a25_fetch
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_decode
+# Loading work.a25_decode
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_execute
+# Loading work.a25_execute
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_barrel_shift
+# Loading work.a25_barrel_shift
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_shifter
+# Loading work.a25_shifter
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_alu
+# Loading work.a25_alu
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_multiply
+# Loading work.a25_multiply
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_register_bank
+# Loading work.a25_register_bank
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_mem
+# Loading work.a25_mem
+# Refreshing C:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25/work.a25_write_back
+# Loading work.a25_write_back
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: walee  Hostname: DESKTOP-T69BBSA  ProcessID: 9536
+#           Attempting to use alternate WLF file "./wlft6jy2iv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6jy2iv
+add wave -position insertpoint sim:/top/dut/u_execute/u_register_bank/*
+run
+run
+run
+run
+run

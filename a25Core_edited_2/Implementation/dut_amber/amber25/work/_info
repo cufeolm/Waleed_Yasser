@@ -1,0 +1,479 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/walee/Desktop/ISA/Implementation/dut_amber/amber25
+va25_alu
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ]BFSci?znjWJ4XX@T[PmO1
+I:Io6`Hm6[JR6j?RVda0]40
+R0
+Z2 w1586729388
+8a25_alu.v
+Fa25_alu.v
+Z3 L0 43
+Z4 OL;L;10.6c;65
+Z5 !s108 1590564514.000000
+!s107 a25_alu.v|
+!s90 -reportprogress|300|a25_alu.v|
+!i113 0
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+va25_barrel_shift
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 1I_0<Jk:?8zlGP:Y1I7`U2
+If4CEO]zF76jPcZY=06@_13
+R0
+R2
+8a25_barrel_shift.v
+Fa25_barrel_shift.v
+Z8 L0 42
+R4
+R5
+!s107 a25_barrel_shift.v|
+!s90 -reportprogress|300|a25_barrel_shift.v|
+!i113 0
+R6
+R7
+va25_coprocessor
+!s110 1590564514
+!i10b 1
+!s100 OzjoIEz;@Xe184>>F1j]52
+IhP^eJo^^B9J11DYF9c4Hj3
+R1
+R0
+R2
+8a25_coprocessor.v
+Fa25_coprocessor.v
+L0 41
+R4
+r1
+!s85 0
+31
+R5
+!s107 a25_coprocessor.v|
+!s90 -reportprogress|300|a25_coprocessor.v|
+!i113 0
+R6
+R7
+va25_core
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 AC3Qm;ZIYinaz`J?zH2]Z2
+InRR1IbFhi?mkBbHJC;B_W3
+R0
+w1590560394
+8a25_core.v
+Fa25_core.v
+Z9 L0 45
+R4
+Z10 !s108 1590564515.000000
+!s107 a25_core.v|
+!s90 -reportprogress|300|a25_core.v|
+!i113 0
+R6
+R7
+va25_dcache
+!s110 1590564515
+!i10b 1
+!s100 EMCziQf1COO;D:L:;Unlo2
+I[35C6TXg=JbcA=3`=JRKW1
+R1
+R0
+R2
+8a25_dcache.v
+Fa25_dcache.v
+Z11 Fa25_localparams.v
+Z12 Fa25_functions.v
+L0 49
+R4
+r1
+!s85 0
+31
+R10
+!s107 a25_functions.v|a25_localparams.v|a25_config_defines.v|a25_dcache.v|
+!s90 -reportprogress|300|a25_dcache.v|
+!i113 0
+R6
+R7
+va25_decode
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 h`@D`Ii_0]7LRT?hlBQ1J1
+IJRcGXQ<kE8H1VSeaOmYi@0
+R0
+R2
+8a25_decode.v
+Fa25_decode.v
+R11
+R12
+R9
+R4
+R10
+!s107 a25_functions.v|a25_localparams.v|a25_decode.v|
+!s90 -reportprogress|300|a25_decode.v|
+!i113 0
+R6
+R7
+va25_execute
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 WUHYi3KEDXefhiA920MU]2
+I;CIe<<=zj4VF]4i=9G[c91
+R0
+w1590440439
+8a25_execute.v
+Fa25_execute.v
+R11
+R12
+R9
+R4
+Z13 !s108 1590564516.000000
+!s107 a25_functions.v|a25_localparams.v|a25_execute.v|
+!s90 -reportprogress|300|a25_execute.v|
+!i113 0
+R6
+R7
+va25_fetch
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 K8CPM:iLCzTkc>d_j3:1l2
+IAfHS;eh9<4VbmKPcbQRjY3
+R0
+w1590440425
+8a25_fetch.v
+Fa25_fetch.v
+Z14 Fmemory_configuration.v
+Z15 L0 44
+R4
+R13
+!s107 memory_configuration.v|a25_fetch.v|
+!s90 -reportprogress|300|a25_fetch.v|
+!i113 0
+R6
+R7
+va25_icache
+!s110 1590564516
+!i10b 1
+!s100 c^fh2WO:_c2kT3:_ATf1^2
+IlIR5[]YV:gE136bNN]Tbn1
+R1
+R0
+R2
+8a25_icache.v
+Fa25_icache.v
+R11
+R12
+L0 47
+R4
+r1
+!s85 0
+31
+R13
+!s107 a25_functions.v|a25_localparams.v|a25_config_defines.v|a25_icache.v|
+!s90 -reportprogress|300|a25_icache.v|
+!i113 0
+R6
+R7
+va25_mem
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 n9JI:6hD^35]kHc5WAJ>i0
+I`DR_doVF972M<FO7J1i861
+R0
+w1590440423
+8a25_mem.v
+Fa25_mem.v
+R14
+R9
+R4
+R13
+!s107 memory_configuration.v|a25_mem.v|
+!s90 -reportprogress|300|a25_mem.v|
+!i113 0
+R6
+R7
+va25_multiply
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 J8_Ke9dWiKBD;LUj3a2173
+IM`8FjmQSPo;J[zRPMEeMc0
+R0
+R2
+8a25_multiply.v
+Fa25_multiply.v
+L0 56
+R4
+Z16 !s108 1590564517.000000
+!s107 a25_multiply.v|
+!s90 -reportprogress|300|a25_multiply.v|
+!i113 0
+R6
+R7
+va25_register_bank
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 _U@[X^TmLAka;[3P>F?9D2
+IJVXNlogY1Z@<]fd=LTBMe3
+R0
+w1590440441
+8a25_register_bank.v
+Fa25_register_bank.v
+R11
+R12
+R15
+R4
+R16
+!s107 a25_functions.v|a25_localparams.v|a25_register_bank.v|
+!s90 -reportprogress|300|a25_register_bank.v|
+!i113 0
+R6
+R7
+va25_shifter
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 =@[GS5KojTj];kGZ0QgIl2
+Ih`=1aBVj4YKV[Z9]k^ZoL2
+R0
+R2
+8a25_shifter.v
+Fa25_shifter.v
+R11
+R8
+R4
+R16
+!s107 a25_localparams.v|a25_shifter.v|
+!s90 -reportprogress|300|a25_shifter.v|
+!i113 0
+R6
+R7
+va25_wishbone
+Z17 !s110 1590564517
+!i10b 1
+!s100 G[CJ0ASI[E;S7Ooj54=R^1
+IGGPRe6hUd6z17hc]U?3W92
+R1
+R0
+w1590384464
+8a25_wishbone.v
+Fa25_wishbone.v
+L0 60
+R4
+r1
+!s85 0
+31
+R16
+!s107 a25_wishbone.v|
+!s90 -reportprogress|300|a25_wishbone.v|
+!i113 0
+R6
+R7
+va25_wishbone_buf
+R17
+!i10b 1
+!s100 lOBbNA`ReRVDT2AXzFLiL3
+InaDzE6^e_>h;l3:917Ed@2
+R1
+R0
+R2
+8a25_wishbone_buf.v
+Fa25_wishbone_buf.v
+L0 52
+R4
+r1
+!s85 0
+31
+R16
+!s107 a25_wishbone_buf.v|
+!s90 -reportprogress|300|a25_wishbone_buf.v|
+!i113 0
+R6
+R7
+va25_write_back
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 U@:O?SE?Q[:MOK=[Mo4:`0
+IkF21j9l0ZjYj8iBzh7dP61
+R0
+w1590440430
+8a25_write_back.v
+Fa25_write_back.v
+R8
+R4
+R16
+!s107 a25_write_back.v|
+!s90 -reportprogress|300|a25_write_back.v|
+!i113 0
+R6
+R7
+vboot_mem128
+Z18 !s110 1590564518
+!i10b 1
+!s100 l[Rj1M[WW7kN^i3M096L50
+I=o;@fIC:zWg=K8Ul6libH1
+R1
+R0
+R2
+8boot_mem128.v
+Fboot_mem128.v
+R9
+R4
+r1
+!s85 0
+31
+Z19 !s108 1590564518.000000
+!s107 boot_mem128.v|
+!s90 -reportprogress|300|boot_mem128.v|
+!i113 0
+R6
+R7
+vboot_mem32
+R18
+!i10b 1
+!s100 gX1aJM?gjnnPPNd@ESBMS1
+InkCKzV:GHb0N<kKH6T4KE1
+R1
+R0
+R2
+8boot_mem32.v
+Fboot_mem32.v
+R9
+R4
+r1
+!s85 0
+31
+R16
+!s107 boot_mem32.v|
+!s90 -reportprogress|300|boot_mem32.v|
+!i113 0
+R6
+R7
+vgeneric_sram_byte_en
+R18
+!i10b 1
+!s100 6C=:<[DdGHHl5I[<j2?D31
+IS6T=n3iH8HPnBK]dC7F^R2
+R1
+R0
+R2
+8generic_sram_byte_en.v
+Fgeneric_sram_byte_en.v
+R3
+R4
+r1
+!s85 0
+31
+R19
+!s107 generic_sram_byte_en.v|
+!s90 -reportprogress|300|generic_sram_byte_en.v|
+!i113 0
+R6
+R7
+vgeneric_sram_line_en
+R18
+!i10b 1
+!s100 h@;]VUJ=YKEVUKQ2Eg`ic0
+IeN0^aSjEemJJcZ`TglJ0T2
+R1
+R0
+R2
+8generic_sram_line_en.v
+Fgeneric_sram_line_en.v
+R8
+R4
+r1
+!s85 0
+31
+R19
+!s107 generic_sram_line_en.v|
+!s90 -reportprogress|300|generic_sram_line_en.v|
+!i113 0
+R6
+R7
+YGUVM_interface
+Z20 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 09mNzl>bmaZlcF:n2L@0T3
+IDP214FbC9ifmS[6^3OQUF0
+!s105 GUVM_bfm_amber_sv_unit
+S1
+R0
+w1590559262
+8GUVM_bfm_amber.sv
+FGUVM_bfm_amber.sv
+L0 1
+R4
+Z21 !s108 1590564519.000000
+!s107 GUVM_bfm_amber.sv|
+!s90 -reportprogress|300|GUVM_bfm_amber.sv|
+!i113 0
+R6
+R7
+n@g@u@v@m_interface
+vtop
+R20
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 1GdKk@6SgY`eJ>334QCNm2
+I?DMPD^OV<z1oUCJdTj;M]0
+!s105 top_sv_unit
+S1
+R0
+w1590559451
+8top.sv
+Ftop.sv
+L0 1
+R4
+R21
+!s107 top.sv|
+!s90 -reportprogress|300|top.sv|
+!i113 0
+R6
+R7

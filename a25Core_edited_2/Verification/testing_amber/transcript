@@ -1,0 +1,1303 @@
+# //  Questa Sim-64
+# //  Version 10.6c win64 Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do WALEED_TEST.do
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:09:58 on May 27,2020
+# vlog -reportprogress 300 -f ../testing_amber/dut_amber.f 
+# -- Compiling module a25_alu
+# -- Compiling module a25_barrel_shift
+# -- Compiling module a25_coprocessor
+# -- Compiling module a25_core
+# -- Compiling module a25_dcache
+# -- Compiling module a25_decode
+# -- Compiling module a25_execute
+# -- Compiling module a25_fetch
+# -- Compiling module a25_icache
+# -- Compiling module a25_mem
+# -- Compiling module a25_multiply
+# -- Compiling module a25_register_bank
+# -- Compiling module a25_shifter
+# -- Compiling module a25_wishbone
+# -- Compiling module a25_wishbone_buf
+# -- Compiling module a25_write_back
+# -- Compiling module generic_sram_line_en
+# -- Compiling module generic_sram_byte_en
+# -- Compiling module boot_mem32
+# -- Compiling module boot_mem128
+# 
+# Top level modules:
+# 	a25_core
+# 	a25_wishbone
+# 	boot_mem32
+# 	boot_mem128
+# End time: 21:09:58 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:09:58 on May 27,2020
+# vlog -reportprogress 300 "+incdir+../testing_amber+../common+../common/inst_h+../common/Tests+../common/sequences" ../testing_amber/target_pkg.sv 
+# -- Compiling package target_package
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) amber_pkg.sv(3): Using implicit +incdir+C:/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Warning: (vlog-2121) amber_seq_item.sv(140): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vlog-2121) amber_seq_item.sv(177): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vlog-2121) amber_seq_item.sv(190): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vlog-2121) amber_seq_item.sv(205): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vlog-2121) amber_seq_item.sv(222): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vlog-2121) amber_seq_item.sv(236): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/child_sequence.sv(31): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/python_sequence.sv(33): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/add_seq.sv(24): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/bie_seq.sv(25): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/subcc_seq.sv(37): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/subcc_seq.sv(38): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/subcc_seq.sv(39): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/subcc_seq.sv(40): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# ** Warning: ** while parsing file included at ../testing_amber/target_pkg.sv(1)
+# ** at ../common/sequences/subcc_seq.sv(41): (vlog-2240) Treating stand-alone use of function 'setup' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:10:00 on May 27,2020, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 15
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:10:01 on May 27,2020
+# vlog -reportprogress 300 ../testing_amber/amber_interface.sv 
+# -- Compiling interface GUVM_interface
+# -- Importing package target_package
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:10:01 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:10:02 on May 27,2020
+# vlog -reportprogress 300 ../testing_amber/top.sv 
+# -- Compiling module top
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package target_package
+# ** Note: (vlog-2286) ../testing_amber/top.sv(6): Using implicit +incdir+C:/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# 
+# Top level modules:
+# 	top
+# End time: 21:10:02 on May 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt top "+UVM_TESTNAME=add_test" "+ARG_INST=A" 
+# Start time: 21:10:02 on May 27,2020
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.top
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.target_package
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.target_package
+# Loading work.top
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.GUVM_interface
+# Loading work.GUVM_interface
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_core
+# Loading work.a25_core
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_fetch
+# Loading work.a25_fetch
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_icache
+# Loading work.a25_icache
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_decode
+# Loading work.a25_decode
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_execute
+# Loading work.a25_execute
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_barrel_shift
+# Loading work.a25_barrel_shift
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_shifter
+# Loading work.a25_shifter
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_alu
+# Loading work.a25_alu
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_multiply
+# Loading work.a25_multiply
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_register_bank
+# Loading work.a25_register_bank
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_mem
+# Loading work.a25_mem
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_dcache
+# Loading work.a25_dcache
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_write_back
+# Loading work.a25_write_back
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.a25_coprocessor
+# Loading work.a25_coprocessor
+# Loading mtiUvm.questa_uvm_pkg
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.generic_sram_line_en
+# Loading work.generic_sram_line_en
+# Refreshing C:/Users/walee/Desktop/ISA/Verification/testing_amber/work.generic_sram_byte_en
+# Loading work.generic_sram_byte_en
+# ** Warning: (vsim-3764) ../common/Tests/GUVM_test.sv(21): Stand-alone call to function 'clp' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /target_package File: amber_pkg.sv
+# ** Warning: (vsim-3764) ../common/Tests/python_test.sv(20): Stand-alone call to function 'clp' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /target_package File: amber_pkg.sv
+# ** Warning: (vsim-3839) ../testing_amber/amber_interface.sv(97): Variable '/top/bfm/dcache_wb_write_data', driven via a port connection, is multiply driven. See ../testing_amber/top.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /top/bfm File: ../testing_amber/amber_interface.sv
+# Loading C:/questasim64_10.6c/uvm-1.1d\win64\uvm_dpi.dll
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: walee  Hostname: DESKTOP-T69BBSA  ProcessID: 17844
+#           Attempting to use alternate WLF file "./wlfttbjgsn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttbjgsn
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test add_test...
+# UVM_INFO ../common/GUVM_env.sv(22) @ 0: uvm_test_top.env_h [] Called env::connect_phase
+# test have started 
+# before the setup 3230228097
+# after the setup 3230228097
+# inst = aaaa5aaa
+# current_pc = 000000                         10
+# -------------------------------
+# inst = f0836001
+# current_pc = 000001                         30
+# -------------------------------
+# inst = f0837006
+# current_pc = 000002                         50
+# -------------------------------
+# inst = f0845005
+# current_pc = 000003                         70
+# -------------------------------
+# inst = f0856001
+# current_pc = 000004                         90
+# -------------------------------
+# inst = f0870005
+# current_pc = 000005                        110
+# -------------------------------
+# inst = aaaa4aaa
+# current_pc = 000006                        130
+# -------------------------------
+# inst = f0877005
+# current_pc = 000007                        150
+# -------------------------------
+# inst = f0825002
+# current_pc = 000008                        170
+# -------------------------------
+# inst = f0806002
+# current_pc = 000009                        190
+# -------------------------------
+# inst = f0807000
+# current_pc = 00000a                        210
+# -------------------------------
+# inst = f0804004
+# current_pc = 00000b                        230
+# -------------------------------
+# inst = e0853004
+# current_pc = 00000c                        250
+# i1=b1f05663 i2=46df998d h1=f8cfeff0
+# -------------------------------
+# inst = f0835005
+# current_pc = 00000d                        270
+# -------------------------------
+# inst = f0876003
+# current_pc = 00000e                        290
+# -------------------------------
+# inst = f0832000
+# current_pc = 00000f                        310
+# -------------------------------
+# inst = f0804002
+# current_pc = 000010                        330
+# -------------------------------
+# inst = f0803006
+# current_pc = 000011                        350
+# -------------------------------
+# inst = e5823000
+# current_pc = 000012                        370
+# -------------------------------
+# inst = f0843005
+# current_pc = 000013                        390
+# -------------------------------
+# inst = f0875003
+# current_pc = 000014                        410
+# -------------------------------
+# inst = f0874002
+# current_pc = 000015                        430
+# -------------------------------
+# inst = f0876005
+# current_pc = 000016                        450
+# -------------------------------
+# inst = f0844003
+# current_pc = 000017                        470
+# -------------------------------
+# inst = e0853004
+# i1=b1f05663 i2=46df998d h1=f8cfeff0
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 490: reporter [ADDITION_FAIL] DUT Calculation=00000000 SB Calculation=f8cfeff0 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:2985317987, add:5} b1f05663
+# 	reg_file[1] = '{data:1189058957, add:4} 46df998d
+# 	reg_file[2] = '{data:4174376944, add:3} f8cfeff0
+# ---------------------------------
+# seq#          0 pc 00000000 inst aaaa5aaa result:00000000
+# seq#          1 pc 00000001 inst f0836001 result:00000000
+# seq#          2 pc 00000002 inst f0837006 result:00000000
+# seq#          3 pc 00000003 inst f0845005 result:00000000
+# seq#          4 pc 00000004 inst f0856001 result:00000000
+# seq#          5 pc 00000005 inst f0870005 result:00000000
+# seq#          6 pc 00000006 inst aaaa4aaa result:00000000
+# seq#          7 pc 00000007 inst f0877005 result:00000000
+# seq#          8 pc 00000008 inst f0825002 result:00000000
+# seq#          9 pc 00000009 inst f0806002 result:00000000
+# seq#         10 pc 0000000a inst f0807000 result:00000000
+# seq#         11 pc 0000000b inst f0804004 result:00000000
+# seq#         12 pc 0000000c inst e0853004 result:00000000
+# seq#         13 pc 0000000d inst f0835005 result:00000000
+# seq#         14 pc 0000000e inst f0876003 result:00000000
+# seq#         15 pc 0000000f inst f0832000 result:00000000
+# seq#         16 pc 00000010 inst f0804002 result:00000000
+# seq#         17 pc 00000011 inst f0803006 result:00000000
+# seq#         18 pc 00000012 inst e5823000 result:00000000
+# seq#         19 pc 00000013 inst f0843005 result:00000000
+# seq#         20 pc 00000014 inst f0875003 result:00000000
+# seq#         21 pc 00000015 inst f0874002 result:00000000
+# seq#         22 pc 00000016 inst f0876005 result:00000000
+# seq#         23 pc 00000017 inst f0844003 result:00000000
+# seq#         24 pc 0000000c inst e0853004 result:00000000
+# -------------------------------
+# before the setup 2654030908
+# after the setup 2654030908
+# inst = aaaa3aaa
+# current_pc = 00001b                        550
+# -------------------------------
+# inst = f0850003
+# current_pc = 00001c                        570
+# -------------------------------
+# inst = f0837006
+# current_pc = 00001d                        590
+# -------------------------------
+# inst = f0850004
+# current_pc = 00001e                        610
+# -------------------------------
+# inst = f0871003
+# current_pc = 00001f                        630
+# -------------------------------
+# inst = f0824005
+# current_pc = 000020                        650
+# -------------------------------
+# inst = aaaa2aaa
+# current_pc = 000021                        670
+# -------------------------------
+# inst = f0846003
+# current_pc = 000022                        690
+# -------------------------------
+# inst = f0833006
+# current_pc = 000023                        710
+# -------------------------------
+# inst = f0811001
+# current_pc = 000024                        730
+# -------------------------------
+# inst = f0830002
+# current_pc = 000025                        750
+# -------------------------------
+# inst = f0815007
+# current_pc = 000026                        770
+# -------------------------------
+# inst = e0830002
+# current_pc = 000027                        790
+# i1=452e618a i2=ec4b34d8 h1=31799662
+# -------------------------------
+# inst = f0852000
+# current_pc = 000028                        810
+# -------------------------------
+# inst = f0845007
+# current_pc = 000029                        830
+# -------------------------------
+# inst = f0834003
+# current_pc = 00002a                        850
+# -------------------------------
+# inst = f0863001
+# current_pc = 00002b                        870
+# -------------------------------
+# inst = f0864007
+# current_pc = 00002c                        890
+# -------------------------------
+# inst = e5800000
+# current_pc = 00002d                        910
+# -------------------------------
+# inst = f0812006
+# current_pc = 00002e                        930
+# -------------------------------
+# inst = f0844002
+# current_pc = 00002f                        950
+# -------------------------------
+# inst = f0825007
+# current_pc = 000030                        970
+# -------------------------------
+# inst = f0845002
+# current_pc = 000031                        990
+# -------------------------------
+# inst = f0850005
+# current_pc = 000032                       1010
+# -------------------------------
+# inst = e0830002
+# i1=452e618a i2=ec4b34d8 h1=31799662
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 1030: reporter [ADDITION_FAIL] DUT Calculation=00000000 SB Calculation=31799662 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:1160667530, add:3} 452e618a
+# 	reg_file[1] = '{data:3964351704, add:2} ec4b34d8
+# 	reg_file[2] = '{data:830051938, add:0} 31799662
+# ---------------------------------
+# seq#          0 pc 0000001b inst aaaa3aaa result:00000000
+# seq#          1 pc 0000001c inst f0850003 result:00000000
+# seq#          2 pc 0000001d inst f0837006 result:00000000
+# seq#          3 pc 0000001e inst f0850004 result:00000000
+# seq#          4 pc 0000001f inst f0871003 result:00000000
+# seq#          5 pc 00000020 inst f0824005 result:00000000
+# seq#          6 pc 00000021 inst aaaa2aaa result:00000000
+# seq#          7 pc 00000022 inst f0846003 result:00000000
+# seq#          8 pc 00000023 inst f0833006 result:00000000
+# seq#          9 pc 00000024 inst f0811001 result:00000000
+# seq#         10 pc 00000025 inst f0830002 result:00000000
+# seq#         11 pc 00000026 inst f0815007 result:00000000
+# seq#         12 pc 00000027 inst e0830002 result:00000000
+# seq#         13 pc 00000028 inst f0852000 result:00000000
+# seq#         14 pc 00000029 inst f0845007 result:00000000
+# seq#         15 pc 0000002a inst f0834003 result:00000000
+# seq#         16 pc 0000002b inst f0863001 result:00000000
+# seq#         17 pc 0000002c inst f0864007 result:00000000
+# seq#         18 pc 0000002d inst e5800000 result:00000000
+# seq#         19 pc 0000002e inst f0812006 result:00000000
+# seq#         20 pc 0000002f inst f0844002 result:00000000
+# seq#         21 pc 00000030 inst f0825007 result:00000000
+# seq#         22 pc 00000031 inst f0845002 result:00000000
+# seq#         23 pc 00000032 inst f0850005 result:00000000
+# seq#         24 pc 00000027 inst e0830002 result:00000000
+# -------------------------------
+# before the setup 3924555475
+# after the setup 3924555475
+# inst = aaaa2aaa
+# current_pc = 000036                       1090
+# -------------------------------
+# inst = f0856000
+# current_pc = 000037                       1110
+# -------------------------------
+# inst = f0820006
+# current_pc = 000038                       1130
+# -------------------------------
+# inst = f0851002
+# current_pc = 000039                       1150
+# -------------------------------
+# inst = f0861003
+# current_pc = 00003a                       1170
+# -------------------------------
+# inst = f0812007
+# current_pc = 00003b                       1190
+# -------------------------------
+# inst = aaaa7aaa
+# current_pc = 00003c                       1210
+# -------------------------------
+# inst = f0805007
+# current_pc = 00003d                       1230
+# -------------------------------
+# inst = f0807007
+# current_pc = 00003e                       1250
+# -------------------------------
+# inst = f0811006
+# current_pc = 00003f                       1270
+# -------------------------------
+# inst = f0874001
+# current_pc = 000040                       1290
+# -------------------------------
+# inst = f0836002
+# current_pc = 000041                       1310
+# -------------------------------
+# inst = e0820007
+# current_pc = 000042                       1330
+# i1=bc148878 i2=248b4b49 h1=e09fd3c1
+# -------------------------------
+# inst = f0826005
+# current_pc = 000043                       1350
+# -------------------------------
+# inst = f0811001
+# current_pc = 000044                       1370
+# -------------------------------
+# inst = f0840000
+# current_pc = 000045                       1390
+# -------------------------------
+# inst = f0862003
+# current_pc = 000046                       1410
+# -------------------------------
+# inst = f0852004
+# current_pc = 000047                       1430
+# -------------------------------
+# inst = e5820000
+# current_pc = 000048                       1450
+# -------------------------------
+# inst = f0877005
+# current_pc = 000049                       1470
+# -------------------------------
+# inst = f0866006
+# current_pc = 00004a                       1490
+# -------------------------------
+# inst = f0817007
+# current_pc = 00004b                       1510
+# -------------------------------
+# inst = f0873006
+# current_pc = 00004c                       1530
+# -------------------------------
+# inst = f0810001
+# current_pc = 00004d                       1550
+# -------------------------------
+# inst = e0820007
+# i1=bc148878 i2=248b4b49 h1=e09fd3c1
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 1570: reporter [ADDITION_FAIL] DUT Calculation=0142ea02 SB Calculation=e09fd3c1 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:3155462264, add:2} bc148878
+# 	reg_file[1] = '{data:613108553, add:7} 248b4b49
+# 	reg_file[2] = '{data:3768570817, add:0} e09fd3c1
+# ---------------------------------
+# seq#          0 pc 00000036 inst aaaa2aaa result:00000000
+# seq#          1 pc 00000037 inst f0856000 result:00000000
+# seq#          2 pc 00000038 inst f0820006 result:00000000
+# seq#          3 pc 00000039 inst f0851002 result:00000000
+# seq#          4 pc 0000003a inst f0861003 result:00000000
+# seq#          5 pc 0000003b inst f0812007 result:00000000
+# seq#          6 pc 0000003c inst aaaa7aaa result:00000000
+# seq#          7 pc 0000003d inst f0805007 result:00000000
+# seq#          8 pc 0000003e inst f0807007 result:00000000
+# seq#          9 pc 0000003f inst f0811006 result:00000000
+# seq#         10 pc 00000040 inst f0874001 result:00000000
+# seq#         11 pc 00000041 inst f0836002 result:00000000
+# seq#         12 pc 00000042 inst e0820007 result:00000000
+# seq#         13 pc 00000043 inst f0826005 result:00000000
+# seq#         14 pc 00000044 inst f0811001 result:00000000
+# seq#         15 pc 00000045 inst f0840000 result:00000000
+# seq#         16 pc 00000046 inst f0862003 result:00000000
+# seq#         17 pc 00000047 inst f0852004 result:00000000
+# seq#         18 pc 00000048 inst e5820000 result:00000000
+# seq#         19 pc 00000049 inst f0877005 result:00000000
+# seq#         20 pc 0000004a inst f0866006 result:00000000
+# seq#         21 pc 0000004b inst f0817007 result:0142ea02
+# seq#         22 pc 0000004c inst f0873006 result:0142ea02
+# seq#         23 pc 0000004d inst f0810001 result:0142ea02
+# seq#         24 pc 00000042 inst e0820007 result:0142ea02
+# -------------------------------
+# before the setup 1237736851
+# after the setup 1237736851
+# inst = aaaa4aaa
+# current_pc = 000051                       1630
+# -------------------------------
+# inst = f0856006
+# current_pc = 000052                       1650
+# -------------------------------
+# inst = f0872006
+# current_pc = 000053                       1670
+# -------------------------------
+# inst = f0871006
+# current_pc = 000054                       1690
+# -------------------------------
+# inst = f0826007
+# current_pc = 000055                       1710
+# -------------------------------
+# inst = f0863004
+# current_pc = 000056                       1730
+# -------------------------------
+# inst = aaaa4aaa
+# current_pc = 000057                       1750
+# -------------------------------
+# inst = f0845000
+# current_pc = 000058                       1770
+# -------------------------------
+# inst = f0853007
+# current_pc = 000059                       1790
+# -------------------------------
+# inst = f0876000
+# current_pc = 00005a                       1810
+# -------------------------------
+# inst = f0872005
+# current_pc = 00005b                       1830
+# -------------------------------
+# inst = f0871004
+# current_pc = 00005c                       1850
+# -------------------------------
+# inst = e0843004
+# current_pc = 00005d                       1870
+# i1=a6fcde4d i2=a6fcde4d h1=4df9bc9a
+# -------------------------------
+# inst = f0840002
+# current_pc = 00005e                       1890
+# -------------------------------
+# inst = f0862006
+# current_pc = 00005f                       1910
+# -------------------------------
+# inst = f0850003
+# current_pc = 000060                       1930
+# -------------------------------
+# inst = f0823006
+# current_pc = 000061                       1950
+# -------------------------------
+# inst = f0860005
+# current_pc = 000062                       1970
+# -------------------------------
+# inst = e5803000
+# current_pc = 000063                       1990
+# -------------------------------
+# inst = f0800001
+# current_pc = 000064                       2010
+# -------------------------------
+# inst = f0873006
+# current_pc = 000065                       2030
+# -------------------------------
+# inst = f0851006
+# current_pc = 000066                       2050
+# -------------------------------
+# inst = f0810005
+# current_pc = 000067                       2070
+# -------------------------------
+# inst = f0815006
+# current_pc = 000068                       2090
+# -------------------------------
+# inst = e0843004
+# i1=a6fcde4d i2=a6fcde4d h1=4df9bc9a
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 2110: reporter [ADDITION_FAIL] DUT Calculation=0142ea02 SB Calculation=4df9bc9a 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:2801589837, add:4} a6fcde4d
+# 	reg_file[1] = '{data:1308212378, add:3} 4df9bc9a
+# ---------------------------------
+# seq#          0 pc 00000051 inst aaaa4aaa result:00000000
+# seq#          1 pc 00000052 inst f0856006 result:00000000
+# seq#          2 pc 00000053 inst f0872006 result:00000000
+# seq#          3 pc 00000054 inst f0871006 result:00000000
+# seq#          4 pc 00000055 inst f0826007 result:00000000
+# seq#          5 pc 00000056 inst f0863004 result:00000000
+# seq#          6 pc 00000057 inst aaaa4aaa result:00000000
+# seq#          7 pc 00000058 inst f0845000 result:00000000
+# seq#          8 pc 00000059 inst f0853007 result:00000000
+# seq#          9 pc 0000005a inst f0876000 result:00000000
+# seq#         10 pc 0000005b inst f0872005 result:00000000
+# seq#         11 pc 0000005c inst f0871004 result:00000000
+# seq#         12 pc 0000005d inst e0843004 result:00000000
+# seq#         13 pc 0000005e inst f0840002 result:00000000
+# seq#         14 pc 0000005f inst f0862006 result:00000000
+# seq#         15 pc 00000060 inst f0850003 result:00000000
+# seq#         16 pc 00000061 inst f0823006 result:00000000
+# seq#         17 pc 00000062 inst f0860005 result:00000000
+# seq#         18 pc 00000063 inst e5803000 result:00000000
+# seq#         19 pc 00000064 inst f0800001 result:00000000
+# seq#         20 pc 00000065 inst f0873006 result:00000000
+# seq#         21 pc 00000066 inst f0851006 result:00000000
+# seq#         22 pc 00000067 inst f0810005 result:00000000
+# seq#         23 pc 00000068 inst f0815006 result:00000000
+# seq#         24 pc 0000005d inst e0843004 result:00000000
+# -------------------------------
+# before the setup 3985473755
+# after the setup 3985473755
+# inst = aaaa2aaa
+# current_pc = 00006c                       2170
+# -------------------------------
+# inst = f0871006
+# current_pc = 00006d                       2190
+# -------------------------------
+# inst = f0845005
+# current_pc = 00006e                       2210
+# -------------------------------
+# inst = f0820001
+# current_pc = 00006f                       2230
+# -------------------------------
+# inst = f0857005
+# current_pc = 000070                       2250
+# -------------------------------
+# inst = f0827003
+# current_pc = 000071                       2270
+# -------------------------------
+# inst = aaaa6aaa
+# current_pc = 000072                       2290
+# -------------------------------
+# inst = f0826004
+# current_pc = 000073                       2310
+# -------------------------------
+# inst = f0805006
+# current_pc = 000074                       2330
+# -------------------------------
+# inst = f0867001
+# current_pc = 000075                       2350
+# -------------------------------
+# inst = f0833006
+# current_pc = 000076                       2370
+# -------------------------------
+# inst = f0864007
+# current_pc = 000077                       2390
+# -------------------------------
+# inst = e0821006
+# current_pc = 000078                       2410
+# i1=3ced2b79 i2=b0bcee61 h1=edaa19da
+# -------------------------------
+# inst = f0821002
+# current_pc = 000079                       2430
+# -------------------------------
+# inst = f0857006
+# current_pc = 00007a                       2450
+# -------------------------------
+# inst = f0872001
+# current_pc = 00007b                       2470
+# -------------------------------
+# inst = f0834002
+# current_pc = 00007c                       2490
+# -------------------------------
+# inst = f0804003
+# current_pc = 00007d                       2510
+# -------------------------------
+# inst = e5841000
+# current_pc = 00007e                       2530
+# -------------------------------
+# inst = f0835006
+# current_pc = 00007f                       2550
+# -------------------------------
+# inst = f0862004
+# current_pc = 000080                       2570
+# -------------------------------
+# inst = f0875002
+# current_pc = 000081                       2590
+# -------------------------------
+# inst = f0833007
+# current_pc = 000082                       2610
+# -------------------------------
+# inst = f0857002
+# current_pc = 000083                       2630
+# -------------------------------
+# inst = e0821006
+# i1=3ced2b79 i2=b0bcee61 h1=edaa19da
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 2650: reporter [ADDITION_FAIL] DUT Calculation=0142ea02 SB Calculation=edaa19da 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:1022176121, add:2} 3ced2b79
+# 	reg_file[1] = '{data:2965171809, add:6} b0bcee61
+# 	reg_file[2] = '{data:3987347930, add:1} edaa19da
+# ---------------------------------
+# seq#          0 pc 0000006c inst aaaa2aaa result:00000000
+# seq#          1 pc 0000006d inst f0871006 result:00000000
+# seq#          2 pc 0000006e inst f0845005 result:00000000
+# seq#          3 pc 0000006f inst f0820001 result:00000000
+# seq#          4 pc 00000070 inst f0857005 result:00000000
+# seq#          5 pc 00000071 inst f0827003 result:00000000
+# seq#          6 pc 00000072 inst aaaa6aaa result:00000000
+# seq#          7 pc 00000073 inst f0826004 result:00000000
+# seq#          8 pc 00000074 inst f0805006 result:00000000
+# seq#          9 pc 00000075 inst f0867001 result:00000000
+# seq#         10 pc 00000076 inst f0833006 result:00000000
+# seq#         11 pc 00000077 inst f0864007 result:00000000
+# seq#         12 pc 00000078 inst e0821006 result:00000000
+# seq#         13 pc 00000079 inst f0821002 result:00000000
+# seq#         14 pc 0000007a inst f0857006 result:00000000
+# seq#         15 pc 0000007b inst f0872001 result:00000000
+# seq#         16 pc 0000007c inst f0834002 result:00000000
+# seq#         17 pc 0000007d inst f0804003 result:00000000
+# seq#         18 pc 0000007e inst e5841000 result:00000000
+# seq#         19 pc 0000007f inst f0835006 result:00000000
+# seq#         20 pc 00000080 inst f0862004 result:00000000
+# seq#         21 pc 00000081 inst f0875002 result:00000000
+# seq#         22 pc 00000082 inst f0833007 result:00000000
+# seq#         23 pc 00000083 inst f0857002 result:00000000
+# seq#         24 pc 00000078 inst e0821006 result:00000000
+# -------------------------------
+# before the setup 3738066621
+# after the setup 3738066621
+# inst = aaaa5aaa
+# current_pc = 000087                       2710
+# -------------------------------
+# inst = f0836003
+# current_pc = 000088                       2730
+# -------------------------------
+# inst = f0821007
+# current_pc = 000089                       2750
+# -------------------------------
+# inst = f0806006
+# current_pc = 00008a                       2770
+# -------------------------------
+# inst = f0805007
+# current_pc = 00008b                       2790
+# -------------------------------
+# inst = f0856000
+# current_pc = 00008c                       2810
+# -------------------------------
+# inst = aaaa2aaa
+# current_pc = 00008d                       2830
+# -------------------------------
+# inst = f0830003
+# current_pc = 00008e                       2850
+# -------------------------------
+# inst = f0845000
+# current_pc = 00008f                       2870
+# -------------------------------
+# inst = f0875003
+# current_pc = 000090                       2890
+# -------------------------------
+# inst = f0847006
+# current_pc = 000091                       2910
+# -------------------------------
+# inst = f0817004
+# current_pc = 000092                       2930
+# -------------------------------
+# inst = e0852002
+# current_pc = 000093                       2950
+# i1=f249a4e4 i2=54a879a9 h1=46f21e8d
+# -------------------------------
+# inst = f0861001
+# current_pc = 000094                       2970
+# -------------------------------
+# inst = f0802001
+# current_pc = 000095                       2990
+# -------------------------------
+# inst = f0847000
+# current_pc = 000096                       3010
+# -------------------------------
+# inst = f0816006
+# current_pc = 000097                       3030
+# -------------------------------
+# inst = f0867002
+# current_pc = 000098                       3050
+# -------------------------------
+# inst = e5852000
+# current_pc = 000099                       3070
+# -------------------------------
+# inst = f0840003
+# current_pc = 00009a                       3090
+# -------------------------------
+# inst = f0864002
+# current_pc = 00009b                       3110
+# -------------------------------
+# inst = f0811001
+# current_pc = 00009c                       3130
+# -------------------------------
+# inst = f0855001
+# current_pc = 00009d                       3150
+# -------------------------------
+# inst = f0805001
+# current_pc = 00009e                       3170
+# -------------------------------
+# inst = e0852002
+# i1=f249a4e4 i2=46f21e8d h1=393bc371
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 3190: reporter [ADDITION_FAIL] DUT Calculation=0142ea02 SB Calculation=46f21e8d 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:4064912612, add:5} f249a4e4
+# 	reg_file[1] = '{data:1190272653, add:2} 46f21e8d
+# ---------------------------------
+# seq#          0 pc 00000087 inst aaaa5aaa result:00000000
+# seq#          1 pc 00000088 inst f0836003 result:00000000
+# seq#          2 pc 00000089 inst f0821007 result:00000000
+# seq#          3 pc 0000008a inst f0806006 result:00000000
+# seq#          4 pc 0000008b inst f0805007 result:00000000
+# seq#          5 pc 0000008c inst f0856000 result:00000000
+# seq#          6 pc 0000008d inst aaaa2aaa result:00000000
+# seq#          7 pc 0000008e inst f0830003 result:00000000
+# seq#          8 pc 0000008f inst f0845000 result:00000000
+# seq#          9 pc 00000090 inst f0875003 result:00000000
+# seq#         10 pc 00000091 inst f0847006 result:00000000
+# seq#         11 pc 00000092 inst f0817004 result:00000000
+# seq#         12 pc 00000093 inst e0852002 result:00000000
+# seq#         13 pc 00000094 inst f0861001 result:00000000
+# seq#         14 pc 00000095 inst f0802001 result:00000000
+# seq#         15 pc 00000096 inst f0847000 result:00000000
+# seq#         16 pc 00000097 inst f0816006 result:00000000
+# seq#         17 pc 00000098 inst f0867002 result:00000000
+# seq#         18 pc 00000099 inst e5852000 result:00000000
+# seq#         19 pc 0000009a inst f0840003 result:00000000
+# seq#         20 pc 0000009b inst f0864002 result:00000000
+# seq#         21 pc 0000009c inst f0811001 result:00000000
+# seq#         22 pc 0000009d inst f0855001 result:00000000
+# seq#         23 pc 0000009e inst f0805001 result:00000000
+# seq#         24 pc 00000093 inst e0852002 result:00000000
+# -------------------------------
+# before the setup 1356200353
+# after the setup 1356200353
+# inst = aaaa5aaa
+# current_pc = 0000a2                       3250
+# -------------------------------
+# inst = f0827006
+# current_pc = 0000a3                       3270
+# -------------------------------
+# inst = f0825005
+# current_pc = 0000a4                       3290
+# -------------------------------
+# inst = f0832003
+# current_pc = 0000a5                       3310
+# -------------------------------
+# inst = f0840005
+# current_pc = 0000a6                       3330
+# -------------------------------
+# inst = f0817004
+# current_pc = 0000a7                       3350
+# -------------------------------
+# inst = aaaa7aaa
+# current_pc = 0000a8                       3370
+# -------------------------------
+# inst = f0872007
+# current_pc = 0000a9                       3390
+# -------------------------------
+# inst = f0825001
+# current_pc = 0000aa                       3410
+# -------------------------------
+# inst = f0820001
+# current_pc = 0000ab                       3430
+# -------------------------------
+# inst = f0845001
+# current_pc = 0000ac                       3450
+# -------------------------------
+# inst = f0824002
+# current_pc = 0000ad                       3470
+# -------------------------------
+# inst = e0855007
+# current_pc = 0000ae                       3490
+# i1=82223a04 i2=cb5c8096 h1=4d7eba9a
+# -------------------------------
+# inst = f0810003
+# current_pc = 0000af                       3510
+# -------------------------------
+# inst = f0861002
+# current_pc = 0000b0                       3530
+# -------------------------------
+# inst = f0857000
+# current_pc = 0000b1                       3550
+# -------------------------------
+# inst = f0860006
+# current_pc = 0000b2                       3570
+# -------------------------------
+# inst = f0811000
+# current_pc = 0000b3                       3590
+# -------------------------------
+# inst = e5865000
+# current_pc = 0000b4                       3610
+# -------------------------------
+# inst = f0817000
+# current_pc = 0000b5                       3630
+# -------------------------------
+# inst = f0871005
+# current_pc = 0000b6                       3650
+# -------------------------------
+# inst = f0825004
+# current_pc = 0000b7                       3670
+# -------------------------------
+# inst = f0826000
+# current_pc = 0000b8                       3690
+# -------------------------------
+# inst = f0811002
+# current_pc = 0000b9                       3710
+# -------------------------------
+# inst = e0855007
+# i1=4d7eba9a i2=cb5c8096 h1=18db3b30
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 3730: reporter [ADDITION_FAIL] DUT Calculation=82223a04 SB Calculation=4d7eba9a 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:1300150938, add:5} 4d7eba9a
+# 	reg_file[1] = '{data:3411837078, add:7} cb5c8096
+# ---------------------------------
+# seq#          0 pc 000000a2 inst aaaa5aaa result:00000000
+# seq#          1 pc 000000a3 inst f0827006 result:00000000
+# seq#          2 pc 000000a4 inst f0825005 result:00000000
+# seq#          3 pc 000000a5 inst f0832003 result:00000000
+# seq#          4 pc 000000a6 inst f0840005 result:00000000
+# seq#          5 pc 000000a7 inst f0817004 result:00000000
+# seq#          6 pc 000000a8 inst aaaa7aaa result:00000000
+# seq#          7 pc 000000a9 inst f0872007 result:00000000
+# seq#          8 pc 000000aa inst f0825001 result:00000000
+# seq#          9 pc 000000ab inst f0820001 result:00000000
+# seq#         10 pc 000000ac inst f0845001 result:00000000
+# seq#         11 pc 000000ad inst f0824002 result:00000000
+# seq#         12 pc 000000ae inst e0855007 result:00000000
+# seq#         13 pc 000000af inst f0810003 result:00000000
+# seq#         14 pc 000000b0 inst f0861002 result:00000000
+# seq#         15 pc 000000b1 inst f0857000 result:00000000
+# seq#         16 pc 000000b2 inst f0860006 result:00000000
+# seq#         17 pc 000000b3 inst f0811000 result:00000000
+# seq#         18 pc 000000b4 inst e5865000 result:00000000
+# seq#         19 pc 000000b5 inst f0817000 result:00000000
+# seq#         20 pc 000000b6 inst f0871005 result:00000000
+# seq#         21 pc 000000b7 inst f0825004 result:82223a04
+# seq#         22 pc 000000b8 inst f0826000 result:82223a04
+# seq#         23 pc 000000b9 inst f0811002 result:82223a04
+# seq#         24 pc 000000ae inst e0855007 result:82223a04
+# -------------------------------
+# before the setup 4038151905
+# after the setup 4038151905
+# inst = aaaa4aaa
+# current_pc = 0000bd                       3790
+# -------------------------------
+# inst = f0852005
+# current_pc = 0000be                       3810
+# -------------------------------
+# inst = f0862007
+# current_pc = 0000bf                       3830
+# -------------------------------
+# inst = f0825004
+# current_pc = 0000c0                       3850
+# -------------------------------
+# inst = f0817003
+# current_pc = 0000c1                       3870
+# -------------------------------
+# inst = f0874007
+# current_pc = 0000c2                       3890
+# -------------------------------
+# inst = aaaa5aaa
+# current_pc = 0000c3                       3910
+# -------------------------------
+# inst = f0805004
+# current_pc = 0000c4                       3930
+# -------------------------------
+# inst = f0823000
+# current_pc = 0000c5                       3950
+# -------------------------------
+# inst = f0800002
+# current_pc = 0000c6                       3970
+# -------------------------------
+# inst = f0827005
+# current_pc = 0000c7                       3990
+# -------------------------------
+# inst = f0801003
+# current_pc = 0000c8                       4010
+# -------------------------------
+# inst = e0843005
+# current_pc = 0000c9                       4030
+# i1=a18bee43 i2=c3360486 h1=64c1f2c9
+# -------------------------------
+# inst = f0835006
+# current_pc = 0000ca                       4050
+# -------------------------------
+# inst = f0805003
+# current_pc = 0000cb                       4070
+# -------------------------------
+# inst = f0831003
+# current_pc = 0000cc                       4090
+# -------------------------------
+# inst = f0824005
+# current_pc = 0000cd                       4110
+# -------------------------------
+# inst = f0811004
+# current_pc = 0000ce                       4130
+# -------------------------------
+# inst = e5873000
+# current_pc = 0000cf                       4150
+# -------------------------------
+# inst = f0853000
+# current_pc = 0000d0                       4170
+# -------------------------------
+# inst = f0821002
+# current_pc = 0000d1                       4190
+# -------------------------------
+# inst = f0843005
+# current_pc = 0000d2                       4210
+# -------------------------------
+# inst = f0816004
+# current_pc = 0000d3                       4230
+# -------------------------------
+# inst = f0821004
+# current_pc = 0000d4                       4250
+# -------------------------------
+# inst = e0843005
+# i1=a18bee43 i2=c3360486 h1=64c1f2c9
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 4270: reporter [ADDITION_FAIL] DUT Calculation=82223a04 SB Calculation=64c1f2c9 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:2710302275, add:4} a18bee43
+# 	reg_file[1] = '{data:3275097222, add:5} c3360486
+# 	reg_file[2] = '{data:1690432201, add:3} 64c1f2c9
+# ---------------------------------
+# seq#          0 pc 000000bd inst aaaa4aaa result:00000000
+# seq#          1 pc 000000be inst f0852005 result:00000000
+# seq#          2 pc 000000bf inst f0862007 result:00000000
+# seq#          3 pc 000000c0 inst f0825004 result:00000000
+# seq#          4 pc 000000c1 inst f0817003 result:00000000
+# seq#          5 pc 000000c2 inst f0874007 result:00000000
+# seq#          6 pc 000000c3 inst aaaa5aaa result:00000000
+# seq#          7 pc 000000c4 inst f0805004 result:00000000
+# seq#          8 pc 000000c5 inst f0823000 result:00000000
+# seq#          9 pc 000000c6 inst f0800002 result:00000000
+# seq#         10 pc 000000c7 inst f0827005 result:00000000
+# seq#         11 pc 000000c8 inst f0801003 result:00000000
+# seq#         12 pc 000000c9 inst e0843005 result:00000000
+# seq#         13 pc 000000ca inst f0835006 result:00000000
+# seq#         14 pc 000000cb inst f0805003 result:00000000
+# seq#         15 pc 000000cc inst f0831003 result:00000000
+# seq#         16 pc 000000cd inst f0824005 result:00000000
+# seq#         17 pc 000000ce inst f0811004 result:00000000
+# seq#         18 pc 000000cf inst e5873000 result:00000000
+# seq#         19 pc 000000d0 inst f0853000 result:00000000
+# seq#         20 pc 000000d1 inst f0821002 result:00000000
+# seq#         21 pc 000000d2 inst f0843005 result:00000000
+# seq#         22 pc 000000d3 inst f0816004 result:00000000
+# seq#         23 pc 000000d4 inst f0821004 result:00000000
+# seq#         24 pc 000000c9 inst e0843005 result:00000000
+# -------------------------------
+# before the setup  892166506
+# after the setup  892166506
+# inst = aaaa2aaa
+# current_pc = 0000d8                       4330
+# -------------------------------
+# inst = f0857006
+# current_pc = 0000d9                       4350
+# -------------------------------
+# inst = f0850002
+# current_pc = 0000da                       4370
+# -------------------------------
+# inst = f0877001
+# current_pc = 0000db                       4390
+# -------------------------------
+# inst = f0814005
+# current_pc = 0000dc                       4410
+# -------------------------------
+# inst = f0803004
+# current_pc = 0000dd                       4430
+# -------------------------------
+# inst = aaaa7aaa
+# current_pc = 0000de                       4450
+# -------------------------------
+# inst = f0861006
+# current_pc = 0000df                       4470
+# -------------------------------
+# inst = f0850004
+# current_pc = 0000e0                       4490
+# -------------------------------
+# inst = f0825004
+# current_pc = 0000e1                       4510
+# -------------------------------
+# inst = f0813007
+# current_pc = 0000e2                       4530
+# -------------------------------
+# inst = f0857001
+# current_pc = 0000e3                       4550
+# -------------------------------
+# inst = e0824007
+# current_pc = 0000e4                       4570
+# i1=d55bbcaa i2=b0520260 h1=85adbf0a
+# -------------------------------
+# inst = f0871003
+# current_pc = 0000e5                       4590
+# -------------------------------
+# inst = f0815004
+# current_pc = 0000e6                       4610
+# -------------------------------
+# inst = f0866004
+# current_pc = 0000e7                       4630
+# -------------------------------
+# inst = f0870001
+# current_pc = 0000e8                       4650
+# -------------------------------
+# inst = f0801004
+# current_pc = 0000e9                       4670
+# -------------------------------
+# inst = e5824000
+# current_pc = 0000ea                       4690
+# -------------------------------
+# inst = f0804005
+# current_pc = 0000eb                       4710
+# -------------------------------
+# inst = f0803002
+# current_pc = 0000ec                       4730
+# -------------------------------
+# inst = f0811001
+# current_pc = 0000ed                       4750
+# -------------------------------
+# inst = f0854004
+# current_pc = 0000ee                       4770
+# -------------------------------
+# inst = f0846003
+# current_pc = 0000ef                       4790
+# -------------------------------
+# inst = e0824007
+# i1=d55bbcaa i2=b0520260 h1=85adbf0a
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 4810: reporter [ADDITION_FAIL] DUT Calculation=82223a04 SB Calculation=85adbf0a 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:3579559082, add:2} d55bbcaa
+# 	reg_file[1] = '{data:2958164576, add:7} b0520260
+# 	reg_file[2] = '{data:2242756362, add:4} 85adbf0a
+# ---------------------------------
+# seq#          0 pc 000000d8 inst aaaa2aaa result:00000000
+# seq#          1 pc 000000d9 inst f0857006 result:00000000
+# seq#          2 pc 000000da inst f0850002 result:00000000
+# seq#          3 pc 000000db inst f0877001 result:00000000
+# seq#          4 pc 000000dc inst f0814005 result:00000000
+# seq#          5 pc 000000dd inst f0803004 result:00000000
+# seq#          6 pc 000000de inst aaaa7aaa result:00000000
+# seq#          7 pc 000000df inst f0861006 result:00000000
+# seq#          8 pc 000000e0 inst f0850004 result:00000000
+# seq#          9 pc 000000e1 inst f0825004 result:00000000
+# seq#         10 pc 000000e2 inst f0813007 result:00000000
+# seq#         11 pc 000000e3 inst f0857001 result:00000000
+# seq#         12 pc 000000e4 inst e0824007 result:00000000
+# seq#         13 pc 000000e5 inst f0871003 result:00000000
+# seq#         14 pc 000000e6 inst f0815004 result:00000000
+# seq#         15 pc 000000e7 inst f0866004 result:00000000
+# seq#         16 pc 000000e8 inst f0870001 result:00000000
+# seq#         17 pc 000000e9 inst f0801004 result:00000000
+# seq#         18 pc 000000ea inst e5824000 result:00000000
+# seq#         19 pc 000000eb inst f0804005 result:00000000
+# seq#         20 pc 000000ec inst f0803002 result:00000000
+# seq#         21 pc 000000ed inst f0811001 result:00000000
+# seq#         22 pc 000000ee inst f0854004 result:00000000
+# seq#         23 pc 000000ef inst f0846003 result:00000000
+# seq#         24 pc 000000e4 inst e0824007 result:00000000
+# -------------------------------
+# before the setup 2933337693
+# after the setup 2933337693
+# inst = aaaa1aaa
+# current_pc = 0000f3                       4870
+# -------------------------------
+# inst = f0840001
+# current_pc = 0000f4                       4890
+# -------------------------------
+# inst = f0816006
+# current_pc = 0000f5                       4910
+# -------------------------------
+# inst = f0830003
+# current_pc = 0000f6                       4930
+# -------------------------------
+# inst = f0855003
+# current_pc = 0000f7                       4950
+# -------------------------------
+# inst = f0844007
+# current_pc = 0000f8                       4970
+# -------------------------------
+# inst = aaaa0aaa
+# current_pc = 0000f9                       4990
+# -------------------------------
+# inst = f0836004
+# current_pc = 0000fa                       5010
+# -------------------------------
+# inst = f0854005
+# current_pc = 0000fb                       5030
+# -------------------------------
+# inst = f0816000
+# current_pc = 0000fc                       5050
+# -------------------------------
+# inst = f0812001
+# current_pc = 0000fd                       5070
+# -------------------------------
+# inst = f0836002
+# current_pc = 0000fe                       5090
+# -------------------------------
+# inst = e0817000
+# current_pc = 0000ff                       5110
+# i1=4226a984 i2=1c8d7f39 h1=5eb428bd
+# -------------------------------
+# inst = f0854003
+# current_pc = 000100                       5130
+# -------------------------------
+# inst = f0803000
+# current_pc = 000101                       5150
+# -------------------------------
+# inst = f0806006
+# current_pc = 000102                       5170
+# -------------------------------
+# inst = f0855007
+# current_pc = 000103                       5190
+# -------------------------------
+# inst = f0857004
+# current_pc = 000104                       5210
+# -------------------------------
+# inst = e5877000
+# current_pc = 000105                       5230
+# -------------------------------
+# inst = f0831006
+# current_pc = 000106                       5250
+# -------------------------------
+# inst = f0820003
+# current_pc = 000107                       5270
+# -------------------------------
+# inst = f0800003
+# current_pc = 000108                       5290
+# -------------------------------
+# inst = f0851002
+# current_pc = 000109                       5310
+# -------------------------------
+# inst = f0877000
+# current_pc = 00010a                       5330
+# -------------------------------
+# inst = e0817000
+# i1=4226a984 i2=1c8d7f39 h1=5eb428bd
+# UVM_ERROR ../common/inst_h/add.svh(20) @ 5350: reporter [ADDITION_FAIL] DUT Calculation=82223a04 SB Calculation=5eb428bd 
+# yay time to print my history
+# --- reg_file Values are ---
+# 	reg_file[0] = '{data:1109830020, add:1} 4226a984
+# 	reg_file[1] = '{data:479035193, add:0} 1c8d7f39
+# 	reg_file[2] = '{data:1588865213, add:7} 5eb428bd
+# ---------------------------------
+# seq#          0 pc 000000f3 inst aaaa1aaa result:00000000
+# seq#          1 pc 000000f4 inst f0840001 result:00000000
+# seq#          2 pc 000000f5 inst f0816006 result:00000000
+# seq#          3 pc 000000f6 inst f0830003 result:00000000
+# seq#          4 pc 000000f7 inst f0855003 result:00000000
+# seq#          5 pc 000000f8 inst f0844007 result:00000000
+# seq#          6 pc 000000f9 inst aaaa0aaa result:00000000
+# seq#          7 pc 000000fa inst f0836004 result:00000000
+# seq#          8 pc 000000fb inst f0854005 result:00000000
+# seq#          9 pc 000000fc inst f0816000 result:00000000
+# seq#         10 pc 000000fd inst f0812001 result:00000000
+# seq#         11 pc 000000fe inst f0836002 result:00000000
+# seq#         12 pc 000000ff inst e0817000 result:00000000
+# seq#         13 pc 00000100 inst f0854003 result:00000000
+# seq#         14 pc 00000101 inst f0803000 result:00000000
+# seq#         15 pc 00000102 inst f0806006 result:00000000
+# seq#         16 pc 00000103 inst f0855007 result:00000000
+# seq#         17 pc 00000104 inst f0857004 result:00000000
+# seq#         18 pc 00000105 inst e5877000 result:00000000
+# seq#         19 pc 00000106 inst f0831006 result:00000000
+# seq#         20 pc 00000107 inst f0820003 result:00000000
+# seq#         21 pc 00000108 inst f0800003 result:00000000
+# seq#         22 pc 00000109 inst f0851002 result:00000000
+# seq#         23 pc 0000010a inst f0877000 result:00000000
+# seq#         24 pc 000000ff inst e0817000 result:00000000
+# -------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 5390: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    5
+# UVM_WARNING :    0
+# UVM_ERROR :   10
+# UVM_FATAL :    0
+# ** Report counts by id
+# []     1
+# [ADDITION_FAIL]    10
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/questasim64_10.6c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 5390 ns  Iteration: 64  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.6c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# End time: 07:26:22 on May 28,2020, Elapsed time: 10:16:20
+# Errors: 0, Warnings: 6
