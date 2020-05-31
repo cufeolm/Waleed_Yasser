@@ -1,0 +1,31 @@
+`include "add.svh"
+`include "sub.svh"
+`include "rev_sub.svh"
+
+`include "bitwise_and.svh"
+`include "bitwise_and_comp.svh"
+`include "bitwise_or.svh"
+`include "bitwise_xor.svh"
+
+`include "abranch.svh"
+
+
+
+`include "test.svh"
+`include "jal.svh"
+`include "load.svh"
+`include "store.svh"
+`include "nop.svh"
+`include "addcc.svh"
+`include "addx.svh"
+`include "bief.svh"
+`include "bvsf.svh"
+`include "bcsf.svh"
+`include "bnegf.svh"
+`include "ba.svh"
+`include "jalr.svh"
+`include "jalr_cpc.svh"
+`include "jalrr.svh"
+`include "subcc.svh"
+`include "mult.svh"
+`include "bier.svh"
